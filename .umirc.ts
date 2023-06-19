@@ -3,11 +3,13 @@ import { defineConfig } from 'dumi';
 const repo = 'cherry-ui';
 
 export default defineConfig({
-  title: 'cherry-ui',
-  favicon:
-    'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
-  logo:
-    'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
-  outputPath: 'docs-dist',
+  title: 'Cherry UI',
+  favicon: 'https://s1.ax1x.com/2023/06/19/pC3ZrNR.png',
+  logo: 'https://s1.ax1x.com/2023/06/19/pC3ZrNR.png',
+  // outputPath: 'docs-dist',
+  outputPath: 'doc-site', // 输出文件夹
+  base: process.env.NODE_ENV === 'production' ? `/${repo}/` : undefined,
+  publicPath: process.env.NODE_ENV === 'production' ? `/${repo}/` : undefined,
+  exportStatic: {}, // 后续会部署到 github pages 直接全部生成静态页面 不走前端路由
   // more config: https://d.umijs.org/config
 });
