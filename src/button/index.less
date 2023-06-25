@@ -1,3 +1,4 @@
+@import url(../themeStyles/index.less);
 //size 为 small 时的样式
 @btn-small-padding: 4px 8px;
 @btn-small-fontSize: 12px;
@@ -9,20 +10,7 @@
 @btn-large-wight: 5rem;
 @btn-large-height: 5rem;
 
-// 圆形按钮样式
-@circle: {
-  width: 3.75rem;
-  height: 3.75rem;
-  padding: 0;
-  overflow: hidden;
-  text-align: center;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  word-break: normal;
-  border: 2px solid #ccc;
-  border-radius: 50%;
-  box-shadow: none;
-};
+
 @loading: {
   display: inline-block;
   width: 0px;
@@ -34,63 +22,68 @@
   background-size: 100%;
   cursor: not-allowed;
   animation: run 2s infinite linear;
-};
+}
+
+;
 
 .cherry-btn {
-    padding: 6px 12px;
-    color: #FFF;
-    background-color: #D07B8B;
-    font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-    vertical-align: middle;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 1px 1px 1px 0px rgba(255, 255, 255, 0.25);
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-  
-    // 按下后颜色
-    &:active {
-      background-color: #D69E96;
-    }
+  padding: 10px 16px;
+  margin: 5px 10px;
+  color: #FFF;
+  background-color: #D07B8B;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 0px rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: background-color 0.5s ease;
 }
 
 .btn-small {
   padding: @btn-small-padding;
   font-size: @btn-small-fontSize;
+
   &.circle {
     width: 2.5rem;
     height: 2.5rem;
   }
+
   & .loading {
     width: 10px;
     height: 10px;
   }
+
   .loading-enter {
     @loading();
   }
+
   .loading-enter-active {
     @loading();
     width: 10px;
     height: 10px;
     transition: all 0.5s;
   }
+
   .loading-enter-done {
     @loading();
     width: 10px;
     height: 10px;
   }
+
   .loading-exit {
     @loading();
     width: 10px;
     height: 10px;
   }
+
   .loading-exit-active {
     @loading();
     width: 0px;
     transition: all 0.5s;
   }
+
   .loading-exit-done {
     @loading();
     width: 0px;
@@ -101,17 +94,21 @@
   padding: @btn-large-padding;
   font-size: @btn-large-fontSize;
   border-radius: 15px;
+
   &.circle {
     width: 5rem;
     height: 5rem;
   }
+
   & .loading {
     width: 26px;
     height: 26px;
   }
+
   .loading-enter {
     @loading();
   }
+
   .loading-enter-active {
     @loading();
     width: 26px;
@@ -119,25 +116,39 @@
 
     transition: all 0.5s;
   }
+
   .loading-enter-done {
     @loading();
     width: 26px;
     height: 26px;
   }
+
   .loading-exit {
     @loading();
     width: 26px;
     height: 26px;
   }
+
   .loading-exit-active {
     @loading();
     width: 0px;
     height: 0px;
     transition: all 0.5s;
   }
+
   .loading-exit-done {
     @loading();
     width: 0px;
     height: 0px;
   }
 }
+
+each(@theme-colors, {
+  .@{key} {
+    background-color: rgba(@value);
+    border: 1px solid rgba(@value);
+    &:hover {
+      background-color: darken(@value, 10%);
+    }
+  }
+})

@@ -15,8 +15,9 @@ group:
 ## 代码演示
 
 <code src="./demo/size.tsx"></code>
+<code src="./demo/type.tsx"></code>
 
-<!-- <code src="./demo/type.tsx"></code>
+<!--
 
 <code src="./demo/htmltype.tsx"></code>
 
