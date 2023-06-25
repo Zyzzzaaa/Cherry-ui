@@ -1,0 +1,190 @@
+.cherry-btn {
+  padding: 6px 12px;
+  color: #FFF;
+  background-color: #D07B8B;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 0px rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+.cherry-btn:active {
+  background-color: #D69E96;
+}
+.btn-small {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+.btn-small.circle {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.btn-small .loading {
+  width: 10px;
+  height: 10px;
+}
+.btn-small .loading-enter {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  margin: auto;
+  margin-right: 5px;
+  overflow: hidden;
+  background-size: 100%;
+  cursor: not-allowed;
+  animation: run 2s infinite linear;
+}
+.btn-small .loading-enter-active {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  margin: auto;
+  margin-right: 5px;
+  overflow: hidden;
+  background-size: 100%;
+  cursor: not-allowed;
+  animation: run 2s infinite linear;
+  width: 10px;
+  height: 10px;
+  transition: all 0.5s;
+}
+.btn-small .loading-enter-done {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  margin: auto;
+  margin-right: 5px;
+  overflow: hidden;
+  background-size: 100%;
+  cursor: not-allowed;
+  animation: run 2s infinite linear;
+  width: 10px;
+  height: 10px;
+}
+.btn-small .loading-exit {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  margin: auto;
+  margin-right: 5px;
+  overflow: hidden;
+  background-size: 100%;
+  cursor: not-allowed;
+  animation: run 2s infinite linear;
+  width: 10px;
+  height: 10px;
+}
+.btn-small .loading-exit-active {
+  display: inline-block;
+  height: 0px;
+  margin: auto;
+  margin-right: 5px;
+  overflow: hidden;
+  background-size: 100%;
+  cursor: not-allowed;
+  animation: run 2s infinite linear;
+  width: 0px;
+  transition: all 0.5s;
+}
+.btn-small .loading-exit-done {
+  display: inline-block;
+  height: 0px;
+  margin: auto;
+  margin-right: 5px;
+  overflow: hidden;
+  background-size: 100%;
+  cursor: not-allowed;
+  animation: run 2s infinite linear;
+  width: 0px;
+}
+.btn-large {
+  padding: 8px 16px;
+  font-size: 28px;
+  border-radius: 15px;
+}
+.btn-large.circle {
+  width: 5rem;
+  height: 5rem;
+}
+.btn-large .loading {
+  width: 26px;
+  height: 26px;
+}
+.btn-large .loading-enter {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  margin: auto;
+  margin-right: 5px;
+  overflow: hidden;
+  background-size: 100%;
+  cursor: not-allowed;
+  animation: run 2s infinite linear;
+}
+.btn-large .loading-enter-active {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  margin: auto;
+  margin-right: 5px;
+  overflow: hidden;
+  background-size: 100%;
+  cursor: not-allowed;
+  animation: run 2s infinite linear;
+  width: 26px;
+  height: 26px;
+  transition: all 0.5s;
+}
+.btn-large .loading-enter-done {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  margin: auto;
+  margin-right: 5px;
+  overflow: hidden;
+  background-size: 100%;
+  cursor: not-allowed;
+  animation: run 2s infinite linear;
+  width: 26px;
+  height: 26px;
+}
+.btn-large .loading-exit {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  margin: auto;
+  margin-right: 5px;
+  overflow: hidden;
+  background-size: 100%;
+  cursor: not-allowed;
+  animation: run 2s infinite linear;
+  width: 26px;
+  height: 26px;
+}
+.btn-large .loading-exit-active {
+  display: inline-block;
+  margin: auto;
+  margin-right: 5px;
+  overflow: hidden;
+  background-size: 100%;
+  cursor: not-allowed;
+  animation: run 2s infinite linear;
+  width: 0px;
+  height: 0px;
+  transition: all 0.5s;
+}
+.btn-large .loading-exit-done {
+  display: inline-block;
+  margin: auto;
+  margin-right: 5px;
+  overflow: hidden;
+  background-size: 100%;
+  cursor: not-allowed;
+  animation: run 2s infinite linear;
+  width: 0px;
+  height: 0px;
+}
