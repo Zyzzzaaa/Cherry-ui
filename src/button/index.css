@@ -1,19 +1,16 @@
 .cherry-btn {
-  padding: 6px 12px;
+  padding: 10px 16px;
+  margin: 5px 10px;
   color: #FFF;
   background-color: #D07B8B;
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 15px;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 1px 1px 1px 0px rgba(255, 255, 255, 0.25);
   cursor: pointer;
   transition: background-color 0.5s ease;
-}
-.cherry-btn:active {
-  background-color: #D69E96;
 }
 .btn-small {
   padding: 4px 8px;
@@ -187,4 +184,67 @@
   animation: run 2s infinite linear;
   width: 0px;
   height: 0px;
+}
+.cherry-components-primary {
+  background-color: #d07b8b;
+  border: 1px solid #d07b8b;
+}
+.cherry-components-primary:hover {
+  background-color: #c3556a;
+}
+.cherry-components-success {
+  background-color: #67c23a;
+  border: 1px solid #67c23a;
+}
+.cherry-components-success:hover {
+  background-color: #529b2e;
+}
+.cherry-components-info {
+  background-color: #67c23a;
+  border: 1px solid #67c23a;
+}
+.cherry-components-info:hover {
+  background-color: #529b2e;
+}
+.cherry-components-warning {
+  background-color: #e6a23c;
+  border: 1px solid #e6a23c;
+}
+.cherry-components-warning:hover {
+  background-color: #d48a1b;
+}
+.cherry-components-danger {
+  background-color: #f56c6c;
+  border: 1px solid #f56c6c;
+}
+.cherry-components-danger:hover {
+  background-color: #f23c3c;
+}
+.cherry-components-link {
+  background-color: #d63384;
+  border: 1px solid #d63384;
+}
+.cherry-components-link:hover {
+  background-color: #b2246b;
+}
+.cherry-components-submit {
+  background-color: #d07b8b;
+  border: 1px solid #d07b8b;
+}
+.cherry-components-submit:hover {
+  background-color: #c3556a;
+}
+.cherry-components-reset {
+  background-color: #f56c6c;
+  border: 1px solid #f56c6c;
+}
+.cherry-components-reset:hover {
+  background-color: #f23c3c;
+}
+.cherry-components-menu {
+  background-color: #6f42c1;
+  border: 1px solid #6f42c1;
+}
+.cherry-components-menu:hover {
+  background-color: #59339d;
 }

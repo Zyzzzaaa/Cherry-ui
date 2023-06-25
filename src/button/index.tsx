@@ -5,27 +5,45 @@ import './index.less'
 export type ButtonHTMLTypes = 'submit' | 'button' | 'reset';
 export type ButtonType = 'link' | 'primary' | 'success' | 'warning' | 'danger';
 type BaseButtonProps = {
-  // type?:ButtonType;
+  type?:ButtonType;
   className?: string;
   size?: 'small' | 'large' | 'default'
 }
+// 原生按钮属性
 type NativeButtonProps = {
   htmltype?: ButtonHTMLTypes;
   target?: string;
   onClick?: React.MouseEventHandler<HTMLElement>;
 } & BaseButtonProps &
   Omit<React.ButtonHTMLAttributes<HTMLElement>, 'type'>;
-export type ButtonProps = Partial<NativeButtonProps>;
+// 链接按钮属性
+type AnchorButtonProps = {
+  href?: string;
+  onClick?: React.MouseEventHandler<HTMLElement>;
+} & BaseButtonProps &
+  Omit<React.AnchorHTMLAttributes<HTMLElement>, 'type'>;
+
+export type ButtonProps = Partial<NativeButtonProps&AnchorButtonProps>;
 
 
 
 const Button: FC<ButtonProps> = (ButtonProps) => {
-  const { size, className,children } = ButtonProps;
+  const { size, className,children,type,href ,...restProps} = ButtonProps;
 
   const classNames = classnames('cherry-btn', className, {
     'btn-small': size == 'small',
-    'btn-large': size === 'large'
+    'btn-large': size === 'large',
+    [`cherry-components-${type}`]: type,
   })
+
+  if (type === 'link' && href) {
+    return (
+      <a className={classNames} href={href} {...restProps}>
+        {children}
+      </a>
+    );
+  }
+
   return <button
     className={classNames}
   >
@@ -37,6 +55,7 @@ Button.defaultProps = {
   size: 'default',
   className: '',
   children:'',
+  type:'primary'
 }
 
 export default Button;
