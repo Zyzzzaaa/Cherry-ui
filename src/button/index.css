@@ -1,6 +1,9 @@
+a {
+  text-decoration: none;
+}
 .cherry-btn {
   padding: 10px 16px;
-  margin: 5px 10px;
+  margin: 8px 10px;
   color: #FFF;
   background-color: #D07B8B;
   font-weight: 500;
@@ -227,24 +230,6 @@
 .cherry-components-link:hover {
   background-color: #b2246b;
 }
-.cherry-components-submit {
-  background-color: #d07b8b;
-  border: 1px solid #d07b8b;
-}
-.cherry-components-submit:hover {
-  background-color: #c3556a;
-}
-.cherry-components-reset {
-  background-color: #f56c6c;
-  border: 1px solid #f56c6c;
-}
-.cherry-components-reset:hover {
-  background-color: #f23c3c;
-}
-.cherry-components-menu {
-  background-color: #6f42c1;
-  border: 1px solid #6f42c1;
-}
-.cherry-components-menu:hover {
-  background-color: #59339d;
+.is-round {
+  border-radius: 20px;
 }
