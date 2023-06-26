@@ -1,33 +1,20 @@
 # cherry-ui
 
-## Getting Started
+A static site base on [dumi](https://d.umijs.org).
 
-Install dependencies,
-
-```bash
-$ npm i
-```
-
-Start the dev server,
+## Development
 
 ```bash
+# install dependencies
+$ npm install
+
+# start dev server
 $ npm start
-```
 
-Build documentation,
-
-```bash
-$ npm run docs:build
-```
-
-Run test,
-
-```bash
-$ npm test
-```
-
-Build library via `father`,
-
-```bash
+# build docs
 $ npm run build
 ```
+
+## LICENSE
+
+MIT

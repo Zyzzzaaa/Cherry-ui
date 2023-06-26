@@ -14,15 +14,9 @@ group:
 
 ## 代码演示
 
-### size
-
 <code src="./demo/size.tsx"></code>
 
-### type
-
 <code src="./demo/type.tsx"></code>
-
-### disabled
 
 <code src="./demo/disabled.tsx"></code>
 

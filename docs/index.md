@@ -5,9 +5,9 @@ hero:
   title: Cherry UI
   description: 🏆 一款基于 Dumi，由 React + TypeScript 开发的组件库 。
   actions:
-    - text: Getting Started
+    - text: 开始使用
       link: /guide
-    - text: GitHub
+    - text: 去GitHub
       link: https://github.com/Zyzzzaaa/cherry-ui
 features:
   - title: 开箱即用
