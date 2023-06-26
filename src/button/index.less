@@ -45,103 +45,12 @@ a {
 .btn-small {
   padding: @btn-small-padding;
   font-size: @btn-small-fontSize;
-
-  &.circle {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-
-  & .loading {
-    width: 10px;
-    height: 10px;
-  }
-
-  .loading-enter {
-    @loading();
-  }
-
-  .loading-enter-active {
-    @loading();
-    width: 10px;
-    height: 10px;
-    transition: all 0.5s;
-  }
-
-  .loading-enter-done {
-    @loading();
-    width: 10px;
-    height: 10px;
-  }
-
-  .loading-exit {
-    @loading();
-    width: 10px;
-    height: 10px;
-  }
-
-  .loading-exit-active {
-    @loading();
-    width: 0px;
-    transition: all 0.5s;
-  }
-
-  .loading-exit-done {
-    @loading();
-    width: 0px;
-  }
 }
 
 .btn-large {
   padding: @btn-large-padding;
   font-size: @btn-large-fontSize;
   border-radius: 15px;
-
-  &.circle {
-    width: 5rem;
-    height: 5rem;
-  }
-
-  & .loading {
-    width: 26px;
-    height: 26px;
-  }
-
-  .loading-enter {
-    @loading();
-  }
-
-  .loading-enter-active {
-    @loading();
-    width: 26px;
-    height: 26px;
-
-    transition: all 0.5s;
-  }
-
-  .loading-enter-done {
-    @loading();
-    width: 26px;
-    height: 26px;
-  }
-
-  .loading-exit {
-    @loading();
-    width: 26px;
-    height: 26px;
-  }
-
-  .loading-exit-active {
-    @loading();
-    width: 0px;
-    height: 0px;
-    transition: all 0.5s;
-  }
-
-  .loading-exit-done {
-    @loading();
-    width: 0px;
-    height: 0px;
-  }
 }
 
 each(@theme-colors, {
@@ -150,6 +59,11 @@ each(@theme-colors, {
     border: 1px solid rgba(@value);
     &:hover {
       background-color: darken(@value, 10%);
+    }
+    &.is-disabled{
+      cursor: not-allowed;
+      background-color: lighten(@value, 18%);
+      border: 1px solid lighten(@value, 18%);
     }
   }
 })

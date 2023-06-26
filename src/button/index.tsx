@@ -2,17 +2,16 @@ import React, { FC } from 'react';
 import classnames from 'classnames';
 import './index.less';
 
-export type ButtonHTMLTypes = 'submit' | 'button' | 'reset';
 export type ButtonType = 'link' | 'primary' | 'success' | 'warning' | 'danger';
 type BaseButtonProps = {
   type?: ButtonType;
   className?: string;
   size?: 'small' | 'large' | 'default';
   round?: boolean;
+  disabled?: boolean;
 };
 // 原生按钮属性
 type NativeButtonProps = {
-  htmltype?: ButtonHTMLTypes;
   target?: string;
   onClick?: React.MouseEventHandler<HTMLElement>;
 } & BaseButtonProps &
@@ -27,12 +26,13 @@ type AnchorButtonProps = {
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
 
 const Button: FC<ButtonProps> = (ButtonProps) => {
-  const { size, className, children, type, href, round, ...restProps } = ButtonProps;
+  const { size, className, children, type, href, disabled, round, ...restProps } = ButtonProps;
 
   const classNames = classnames('cherry-btn', className, {
     'btn-small': size == 'small',
     'btn-large': size === 'large',
     'is-round': round,
+    'is-disabled': disabled,
     [`cherry-components-${type}`]: type,
   });
 
@@ -53,6 +53,7 @@ Button.defaultProps = {
   children: '',
   type: 'primary',
   round: false,
+  disabled: false,
 };
 
 export default Button;
