@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
-import './index.less';
+import './style/index.less';
 
 export type ButtonType = 'link' | 'primary' | 'success' | 'warning' | 'danger';
 type BaseButtonProps = {

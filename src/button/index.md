@@ -10,11 +10,21 @@ group:
 
 # Button 按钮
 
-按钮组件有三种大小、八种类型、三种模式：基本、圆形、加载中；按需选择对应的属性加入类名即可使用
+按钮组件有三种大小、五种类型，还可以设置圆角按钮；按需选择对应的属性加入类名即可使用。
 
 ## 代码演示
 
-<code src="./demo/size.tsx"></code> <code src="./demo/type.tsx"></code> <code src="./demo/disabled.tsx"></code>
+### size
+
+<code src="./demo/size.tsx"></code>
+
+### type
+
+<code src="./demo/type.tsx"></code>
+
+### disabled
+
+<code src="./demo/disabled.tsx"></code>
 
 ## API
 
