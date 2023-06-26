@@ -1,14 +1,15 @@
 import React, { FC } from 'react';
-import classnames from "classnames";
-import './index.less'
+import classnames from 'classnames';
+import './index.less';
 
 export type ButtonHTMLTypes = 'submit' | 'button' | 'reset';
 export type ButtonType = 'link' | 'primary' | 'success' | 'warning' | 'danger';
 type BaseButtonProps = {
-  type?:ButtonType;
+  type?: ButtonType;
   className?: string;
-  size?: 'small' | 'large' | 'default'
-}
+  size?: 'small' | 'large' | 'default';
+  round?: boolean;
+};
 // 原生按钮属性
 type NativeButtonProps = {
   htmltype?: ButtonHTMLTypes;
@@ -23,18 +24,17 @@ type AnchorButtonProps = {
 } & BaseButtonProps &
   Omit<React.AnchorHTMLAttributes<HTMLElement>, 'type'>;
 
-export type ButtonProps = Partial<NativeButtonProps&AnchorButtonProps>;
-
-
+export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
 
 const Button: FC<ButtonProps> = (ButtonProps) => {
-  const { size, className,children,type,href ,...restProps} = ButtonProps;
+  const { size, className, children, type, href, round, ...restProps } = ButtonProps;
 
   const classNames = classnames('cherry-btn', className, {
     'btn-small': size == 'small',
     'btn-large': size === 'large',
+    'is-round': round,
     [`cherry-components-${type}`]: type,
-  })
+  });
 
   if (type === 'link' && href) {
     return (
@@ -44,18 +44,15 @@ const Button: FC<ButtonProps> = (ButtonProps) => {
     );
   }
 
-  return <button
-    className={classNames}
-  >
-    {children}
-  </button>;
+  return <button className={classNames}>{children}</button>;
 };
 
 Button.defaultProps = {
   size: 'default',
   className: '',
-  children:'',
-  type:'primary'
-}
+  children: '',
+  type: 'primary',
+  round: false,
+};
 
 export default Button;

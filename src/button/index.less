@@ -10,7 +10,6 @@
 @btn-large-wight: 5rem;
 @btn-large-height: 5rem;
 
-
 @loading: {
   display: inline-block;
   width: 0px;
@@ -22,19 +21,21 @@
   background-size: 100%;
   cursor: not-allowed;
   animation: run 2s infinite linear;
+};
+
+a {
+  text-decoration: none;
 }
 
-;
-
 .cherry-btn {
+  margin: 8px 10px;
   padding: 10px 16px;
-  margin: 5px 10px;
-  color: #FFF;
-  background-color: #D07B8B;
+  color: #fff;
   font-weight: 500;
   font-size: 15px;
   text-align: center;
   vertical-align: middle;
+  background-color: #d07b8b;
   border-radius: 10px;
   box-shadow: 1px 1px 1px 0px rgba(255, 255, 255, 0.25);
   cursor: pointer;
@@ -152,3 +153,6 @@ each(@theme-colors, {
     }
   }
 })
+  .is-round {
+  border-radius: 20px;
+}
