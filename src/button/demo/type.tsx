@@ -1,3 +1,8 @@
+/**
+ * title: type
+ * description: 可以根据`type`来设置不同的颜色, `primary`、`success`、 `warning`、 `danger`、 `link`。设置`round`属性可以设置圆角按钮。
+ */
+
 import React from 'react';
 import { Button } from 'cherry-ui';
 export default () => {
