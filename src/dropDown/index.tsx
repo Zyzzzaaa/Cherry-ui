@@ -7,9 +7,15 @@ export interface DropDownProps{
     children: React.ReactElement,
 }
 
-export interface MenuPops{}
+export interface MenuPops{
+    items?:{
+        content:string,
+        className: 'menu-item' | 'menu-item-forbidden',
+        childrens: any
+    }
+}
 
-const Menu:React.FC<MenuPops>=({})=>{
+const Menu:React.FC<MenuPops>=({items})=>{
     return(
         <div></div>
     )

@@ -4,8 +4,8 @@ nav:
   title: 组件
   order: 1
 group:
-  title: 导航
-  order: 3
+  title: 布局
+  order: 2
 ---
 
 # DropDown 下拉菜单
@@ -14,11 +14,11 @@ group:
 
 ## 代码演示
 
+<!-- <code src="./demo/trigger.tsx"></code> -->
+
 <!-- <code src="./demo/basic.tsx"></code>
 
 <code src="./demo/popupPlacement.tsx"></code>
-
-<code src="./demo/trigger.tsx"></code>
 
 <code src="./demo/rightClick.tsx"></code>
 
