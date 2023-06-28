@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Trigger from 'rc-trigger';
+// import Trigger from '@rc-component/trigger';
 import 'rc-trigger/assets/index.css';
 
 // 下拉按钮传参类型
@@ -34,7 +35,7 @@ const Menu: React.FC<MenuPops> = ({ items }) => {
                 {
                     items && items.map((item, index) => {
                         return <div
-                            key="index"
+                            key={index}
                             className={item.className === 'menu-item-forbidden' ? item.className : index === selected ? 'menu-item-focus' : 'menu-item'}
                             onClick={() => updateSelected(index, item.className)}
                         >{item.content}</div>
@@ -48,7 +49,7 @@ const Menu: React.FC<MenuPops> = ({ items }) => {
 const DropDown: React.FC<DropDownProps> = ({
     children,
     items,
-    trigger = 'hover',
+    trigger = 'click',
     popupPlacement = 'bottom'
 }) => {
 
@@ -56,12 +57,10 @@ const DropDown: React.FC<DropDownProps> = ({
         <Trigger
             popup={<Menu items={items}></Menu>}
             popupPlacement={popupPlacement}
-            action={trigger}
+            action={[trigger]}
             popupAlign={{
-                overflow: {
-                    adjustX: 1,
-                    adjustY: 1,
-                },
+                points: ['tl', 'bl'],
+                offset: [0, 3]
             }}
         >
             {children}
