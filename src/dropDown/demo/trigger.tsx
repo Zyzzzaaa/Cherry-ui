@@ -1,4 +1,4 @@
-import {DropDown,Button} from "cherry-ui";
+import { DropDown, Button } from "cherry-ui";
 
 const menu = [
     {
@@ -15,10 +15,16 @@ const menu = [
     }
 ]
 
-export default ()=>{
+export default () => {
     return (
-        <DropDown items={menu}>
-            <Button>点击</Button>
-        </DropDown>
+        <div>
+            <DropDown items={menu}>
+                <Button>移入</Button>
+            </DropDown>
+            <DropDown items={menu}>
+                <Button>点击</Button>
+            </DropDown>
+        </div>
+
     )
 }

@@ -1,6 +1,17 @@
 # cherry-ui
 
-A static site base on [dumi](https://d.umijs.org).
+[![NPM version](https://img.shields.io/npm/v/cherry-ui.svg?style=flat)](https://npmjs.org/package/cherry-ui)
+[![NPM downloads](http://img.shields.io/npm/dm/cherry-ui.svg?style=flat)](https://npmjs.org/package/cherry-ui)
+
+A react library developed with dumi
+
+## Usage
+
+TODO
+
+## Options
+
+TODO
 
 ## Development
 
@@ -8,11 +19,20 @@ A static site base on [dumi](https://d.umijs.org).
 # install dependencies
 $ npm install
 
-# start dev server
+# develop library by docs demo
 $ npm start
 
-# build docs
+# build library source code
 $ npm run build
+
+# build library source code in watch mode
+$ npm run build:watch
+
+# build docs
+$ npm run docs:build
+
+# check your project for potential problems
+$ npm run doctor
 ```
 
 ## LICENSE

@@ -1,1 +1,68 @@
 @import url(../../themeStyles/index.less);
+
+.cherry-dropdown {
+  padding: 5px;
+  background-color: transparent;
+
+    .menu {
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 6px rgba(0, 0, 0, 0.05);
+  }
+
+    .menu-item {
+      position: relative;
+      height: 20px;
+      line-height: 20px;
+      padding: 10px 30px 10px 10px;
+      cursor: pointer;
+
+      //层级菜单
+      .item-menu {
+        position: absolute;
+      }
+  }
+
+    .menu-item-focus {
+      position: relative;
+      height: 20px;
+      line-height: 20px;
+      padding: 10px 30px 10px 10px;
+      color: #1890ff;
+      cursor: pointer;
+  }
+
+  //菜单存在层级的箭头表示
+  .item-arrow {
+    position: absolute;
+    right: 0;
+    bottom: 4px;
+    span {
+      color:#c1c1c1;
+    }
+  }
+
+    .menu-item-forbidden {
+      position: relative;
+      height: 20px;
+      line-height: 20px;
+      padding: 10px 30px 10px 10px;
+      background-color: #efefef;
+      cursor: not-allowed;
+  }
+    
+    .menu-item:hover,.menu-item-focus:hover {
+      background-color: azure;
+  }
+}
+
+.cherry-dropdown-box {
+   button {
+    margin: 0 10px;
+  }
+
+  .popup {
+    transition: height 1s linear 0s;
+  }
+}
