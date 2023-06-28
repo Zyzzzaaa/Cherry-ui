@@ -29,7 +29,11 @@ nav:
 ```javascript
 import React from 'react';
 import { Button } from 'cherry-ui-antd';
+<<<<<<< HEAD
 import 'cherry-ui-antd/lib/index.css';
+=======
+import 'rabbit-ui-antd/lib/index.css';
+>>>>>>> 7adccf4aa081b4f7cd75a4191b4b929c05638383
 
 const App = () => (
   <>
