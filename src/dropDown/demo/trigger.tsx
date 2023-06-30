@@ -1,4 +1,5 @@
 import { DropDown, Button } from "cherry-ui";
+import React from "react";
 
 const menu = [
     {
@@ -18,10 +19,10 @@ const menu = [
 export default () => {
     return (
         <div>
-            <DropDown items={menu}>
+            <DropDown items={menu} trigger='hover'>
                 <Button>移入</Button>
             </DropDown>
-            <DropDown items={menu}>
+            <DropDown items={menu} trigger='click'>
                 <Button>点击</Button>
             </DropDown>
         </div>
