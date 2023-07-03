@@ -16,7 +16,6 @@ export interface MenuPops {
     items: {
         content: string,
         className: 'menu-item' | 'menu-item-forbidden',
-        childrens: [],
     }[]
 }
 
