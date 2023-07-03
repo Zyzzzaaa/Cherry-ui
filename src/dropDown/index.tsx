@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Trigger from 'rc-trigger';
-// import Trigger from '@rc-component/trigger';
 import 'rc-trigger/assets/index.css';
+import './style/index.less'
 
 // 下拉按钮传参类型
 export interface DropDownProps {
@@ -50,7 +50,7 @@ const Menu: React.FC<MenuPops> = ({ items }) => {
 const DropDown: React.FC<DropDownProps> = ({
     children,
     items,
-    trigger = 'click',
+    trigger = 'hover',
     popupPlacement = 'bottom'
 }) => {
 
