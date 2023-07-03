@@ -16,6 +16,8 @@ group:
 
 <code src="./demo/trigger.tsx"></code>
 
+<code src="./demo/forbidden.tsx"></code>
+
 <!-- <code src="./demo/basic.tsx"></code>
 
 <code src="./demo/popupPlacement.tsx"></code>

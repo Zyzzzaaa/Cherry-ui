@@ -4,7 +4,7 @@
 }
 .cherry-dropdown .menu {
   padding: 5px;
-  background-color: white;
+  background-color: #f8ecee;
   border-radius: 5px;
   box-shadow: 0px 0px 4px 6px rgba(0, 0, 0, 0.05);
 }
@@ -23,7 +23,7 @@
   height: 20px;
   line-height: 20px;
   padding: 10px 30px 10px 10px;
-  color: #1890ff;
+  color: #d07b8b;
   cursor: pointer;
 }
 .cherry-dropdown .item-arrow {
@@ -44,7 +44,7 @@
 }
 .cherry-dropdown .menu-item:hover,
 .cherry-dropdown .menu-item-focus:hover {
-  background-color: azure;
+  background-color: #ebc6cd;
 }
 .cherry-dropdown-box button {
   margin: 0 10px;
