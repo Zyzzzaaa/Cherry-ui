@@ -20,16 +20,6 @@ group:
 
 <code src="./demo/location.tsx"></code> 
 
-<!-- <code src="./demo/basic.tsx"></code>
-
-<code src="./demo/popupPlacement.tsx"></code>
-
-<code src="./demo/rightClick.tsx"></code>
-
-<code src="./demo/else.tsx"></code>
-
-<code src="./demo/childrens.tsx"></code> -->
-
 ## API
 
 | 参数 | 说明 | 类型 | 默认值 |
@@ -37,7 +27,7 @@ group:
 | trigger | 下拉菜单触发方式 | `click`\|`hover`| `hover` |
 | popupPlacement | 菜单弹出位置`bottom`\|`left`\|`top`\|`right` \|`bottomright`\|`topright`\|`bottomleft`\|`topleft` | `string` | `'bottom'` |
 | items | 菜单配置项 | `itemProps` | - |
-| children | 触发菜单内容 | `ReactNode` | - |
+| children | 菜单内容 | `ReactNode` | - |
 | onChange | 菜单显示时状态变化触发的函数 | `Function` | - |
 
 ### itemProps
