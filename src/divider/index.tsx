@@ -19,7 +19,7 @@ const Divider: React.FC<DividerProps> = (props) => {
 
     return (
         <div className={className} {...restProps}>
-            {(text !== null) && <span>{text}</span>}
+            {(text !== undefined) && <span>{text}</span>}
         </div>
     )
 }

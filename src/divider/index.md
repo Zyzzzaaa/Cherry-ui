@@ -16,11 +16,11 @@ group:
 
 <code src="./demo/color.tsx"></code>
 
+<code src="./demo/text.tsx"></code>
+
 ## API
 
 | 参数 | 说明 | 类型 | 默认值 |
 | :-- | :-- | :-- | :-- |
-| style | 分割线的颜色 | `color`\|`hover`| `hover` |
-| items | 菜单配置项 | `itemProps` | - |
-| children | 菜单内容 | `ReactNode` | - |
-| onChange | 菜单显示时状态变化触发的函数 | `Function` | - |
+| style | 分割线的颜色 |`primary`\|`success`\|`info`\|`warning`\|`danger`\|`link`| `primary` |
+| text | 分割线中间的文本 | `string` | - |
