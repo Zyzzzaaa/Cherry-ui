@@ -23,10 +23,6 @@ const Space:React.FC<SpaceProps>=(props)=>{
         [`space-${size}`]:size
     })
 
-    // const firstItemClasses = classNames('space-item-first',{
-
-    // })
-
     return(
         <div className={classes} {...restProps}>
             {React.Children.map(children,(child)=>(
