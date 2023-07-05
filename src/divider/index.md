@@ -5,7 +5,6 @@ nav:
   order: 1
 group:
   title: 布局
-  order: 4
 ---
 
 # Divider 分割线
