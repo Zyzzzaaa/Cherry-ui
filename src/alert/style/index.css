@@ -39,6 +39,16 @@
 .cherry-alert.alert-danger .alert-title {
   color: #bb0d0d;
 }
+.cherry-alert .alert-in {
+  display: flex;
+  justify-content: space-between;
+}
+.cherry-alert .alert-in .alert-close {
+  margin-left: 8px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
 @keyframes bounce {
   0% {
     transform: scale(0);
