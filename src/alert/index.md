@@ -16,14 +16,21 @@ group:
 
 <code src="./demo/color.tsx"></code>
 
+<code src="./demo/close.tsx"></code>
+
 ## API
+
+### 属性
 
 | 属性 | 说明 | 类型 | 默认值 |
 | :-- | :-- | :-- | :-- |
-| size | 按钮大小 | `small`\|`large`\|`default` | `default` |
-| handleClick | 点击事件回调函数 | `(e: React.SyntheticEvent) => void` | `() => {return null;}` |
-| disabled | 禁用 | `boolean` | `false` |
-| type | 按钮类型 | `primary`\|`success`\|`warning`\|`danger`\|`link` | `primary` |
-| herf | 要跳转的链接 | `string` | - |
+| type | 提示类型 | `primary`\|`success`\|`warning`\|`danger`|`primary`|
+| title | Alert标题 | `string` | 提示 |
+| children | Alert描述 | `string` | 描述 |
+| closeable | 是否可关闭 | `boolean` | `false` |
 
-支持原生 button 的其他所有属性。
+### 事件
+
+| 名称 | 描述 | 类型 |
+| :-- | :-- | :-- |
+| onClose | 关闭Alert时触发的事件 | `Function` | (event:MouseEvent) => void |
