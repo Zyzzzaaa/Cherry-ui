@@ -27,7 +27,7 @@ const Drawer:React.FC<DrawerProps> = props => {
     })
   return (
     <div className={classes} style={rootStyle} {...restProps}>
-        
+        <div className="cherry-drawer-wrapper"></div>
     </div>
   )
 }
