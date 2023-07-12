@@ -14,9 +14,7 @@ group:
 
 ## 代码演示
 
-<!-- <code src="./demo/color.tsx"></code>
-
-<code src="./demo/close.tsx"></code> -->
+<code src="./demo/basic.tsx"></code>
 
 ## API
 
