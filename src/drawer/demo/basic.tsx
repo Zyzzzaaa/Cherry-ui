@@ -9,7 +9,7 @@ export default () => {
     return (
         <div>
             <Button>Open the Drawer</Button>
-            <Drawer>
+            <Drawer title='Basic Drawer' close={true}>
                 <p>Some contents...</p>
                 <p>Some contents...</p>
                 <p>Some contents...</p>
