@@ -31,7 +31,7 @@
                 line-height: 1.5;
                 border-bottom: 1px solid rgba(5, 5, 5, .06);
                 
-                IconClose{
+                .drawer-close{
                     position: relative;
                     margin-right: 10px;
                     cursor: pointer;
@@ -66,4 +66,65 @@
         pointer-events: auto;
     }
 
+    //不同位置
+    .drawer-left{
+        left: 0;
+        animation: drawer-left .3s ease-in-out;
+    }
+
+    .drawer-right{
+        right: 0;
+        animation: drawer-right .3s ease-in-out;
+    }
+
+    .drawer-top{
+        top: 0;
+        width: 100%;
+        animation: drawer-top .3s ease-in-out;
+    }
+
+    .drawer-bottom{
+        bottom: 0;
+        width: 100%;
+        animation: drawer-bottom .3s ease-in-out;
+    }
 }
+
+// 动画
+//drawer-left 
+@keyframes drawer-left {
+    0% {
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+//drawer-right
+@keyframes drawer-right {
+    0% {
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+//drawer-top
+@keyframes drawer-top {
+    0% {
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+//drawer-bottom
+@keyframes drawer-bottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
