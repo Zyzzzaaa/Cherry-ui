@@ -30,7 +30,7 @@
   line-height: 1.5;
   border-bottom: 1px solid rgba(5, 5, 5, 0.06);
 }
-.cherry-drawer .cherry-drawer-wrapper .drawer-content .drawer-header IconClose {
+.cherry-drawer .cherry-drawer-wrapper .drawer-content .drawer-header .drawer-close {
   position: relative;
   margin-right: 10px;
   cursor: pointer;
@@ -56,4 +56,54 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   pointer-events: auto;
+}
+.cherry-drawer .drawer-left {
+  left: 0;
+  animation: drawer-left 0.3s ease-in-out;
+}
+.cherry-drawer .drawer-right {
+  right: 0;
+  animation: drawer-right 0.3s ease-in-out;
+}
+.cherry-drawer .drawer-top {
+  top: 0;
+  width: 100%;
+  animation: drawer-top 0.3s ease-in-out;
+}
+.cherry-drawer .drawer-bottom {
+  bottom: 0;
+  width: 100%;
+  animation: drawer-bottom 0.3s ease-in-out;
+}
+@keyframes drawer-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes drawer-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes drawer-top {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes drawer-bottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
