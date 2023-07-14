@@ -64,8 +64,6 @@ const Drawer: React.FC<DrawerProps> = props => {
     })
 
     React.useEffect(() => {
-        console.log('open:'+open)
-        console.log('masked:'+masked);
         if(open){
             setMasked(!masked)
         }else{
@@ -75,14 +73,13 @@ const Drawer: React.FC<DrawerProps> = props => {
 
     return (
         <div className={classes} style={{ ...rootStyle }} {...restProps}>
-
             {/* 遮罩层 */}
             {masked ? <div className = 'drawer-mask' onClick={maskCloseable && open ? onHide : undefined}></div> : null}
 
             {/* drawer弹出框 */}
             <div className = {classNames('cherry-drawer-wrapper',`drawer-${placement}`)}>
                 {open ?
-                    <div className='drawer-content'>
+                    <div className={classNames('drawer-content',`drawer-content-${placement}`)}>
                         <header className='drawer-header'>
                             {close ? <div className='drawer-close' onClick={open?onHide : undefined}><IconClose></IconClose></div> : null}
                             <div className='drawer-title'>{title}</div>

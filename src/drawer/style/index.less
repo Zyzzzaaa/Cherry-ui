@@ -10,8 +10,8 @@
     // 抽屉内容
     .cherry-drawer-wrapper {
         position: absolute;
-        width: 376px;
-        height: 100%;
+        // width: 376px;
+        // height: 100%;
 
         .drawer-content {
             position: absolute;
@@ -52,6 +52,19 @@
                 overflow: auto;
                 font-size: 14px;
             }
+
+            &.drawer-content-left{
+                animation: drawer-left .3s ease-in-out;
+            }
+            &.drawer-content-right{
+                animation: drawer-right .3s ease-in-out;
+            }
+            &.drawer-content-top{
+                animation: drawer-top .3s ease-in-out;
+            }
+            &.drawer-content-bottom{
+                animation: drawer-bottom .3s ease-in-out;
+            }
         }
     }
 
@@ -69,24 +82,30 @@
     //不同位置
     .drawer-left{
         left: 0;
-        animation: drawer-left .3s ease-in-out;
+        width: 376px;
+        height: 100%;
+        // animation: drawer-left .3s ease-in-out;
     }
 
     .drawer-right{
         right: 0;
-        animation: drawer-right .3s ease-in-out;
+        width: 376px;
+        height: 100%;
+        // animation: drawer-right .3s ease-in-out;
     }
 
     .drawer-top{
         top: 0;
         width: 100%;
-        animation: drawer-top .3s ease-in-out;
+        height: 200px;
+        // animation: drawer-top .3s ease-in-out;
     }
 
     .drawer-bottom{
         bottom: 0;
         width: 100%;
-        animation: drawer-bottom .3s ease-in-out;
+        height: 200px;
+        // animation: drawer-bottom .3s ease-in-out;
     }
 }
 
