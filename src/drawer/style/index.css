@@ -9,8 +9,6 @@
 }
 .cherry-drawer .cherry-drawer-wrapper {
   position: absolute;
-  width: 376px;
-  height: 100%;
 }
 .cherry-drawer .cherry-drawer-wrapper .drawer-content {
   position: absolute;
@@ -48,6 +46,18 @@
   overflow: auto;
   font-size: 14px;
 }
+.cherry-drawer .cherry-drawer-wrapper .drawer-content.drawer-content-left {
+  animation: drawer-left 0.3s ease-in-out;
+}
+.cherry-drawer .cherry-drawer-wrapper .drawer-content.drawer-content-right {
+  animation: drawer-right 0.3s ease-in-out;
+}
+.cherry-drawer .cherry-drawer-wrapper .drawer-content.drawer-content-top {
+  animation: drawer-top 0.3s ease-in-out;
+}
+.cherry-drawer .cherry-drawer-wrapper .drawer-content.drawer-content-bottom {
+  animation: drawer-bottom 0.3s ease-in-out;
+}
 .cherry-drawer .drawer-mask {
   position: absolute;
   top: 0;
@@ -57,23 +67,28 @@
   background-color: rgba(0, 0, 0, 0.4);
   pointer-events: auto;
 }
+.cherry-drawer.drawer-inline {
+  position: absolute;
+}
 .cherry-drawer .drawer-left {
   left: 0;
-  animation: drawer-left 0.3s ease-in-out;
+  width: 376px;
+  height: 100%;
 }
 .cherry-drawer .drawer-right {
   right: 0;
-  animation: drawer-right 0.3s ease-in-out;
+  width: 376px;
+  height: 100%;
 }
 .cherry-drawer .drawer-top {
   top: 0;
   width: 100%;
-  animation: drawer-top 0.3s ease-in-out;
+  height: 200px;
 }
 .cherry-drawer .drawer-bottom {
   bottom: 0;
   width: 100%;
-  animation: drawer-bottom 0.3s ease-in-out;
+  height: 200px;
 }
 @keyframes drawer-left {
   0% {

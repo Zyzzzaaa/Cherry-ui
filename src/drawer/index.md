@@ -16,6 +16,10 @@ group:
 
 <code src="./demo/basic.tsx"></code>
 
+<code src="./demo/position.tsx"></code>
+
+<code src="./demo/currentDOM.tsx"></code>
+
 ## API
 
 ### 属性
