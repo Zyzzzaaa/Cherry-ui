@@ -67,6 +67,9 @@
   background-color: rgba(0, 0, 0, 0.4);
   pointer-events: auto;
 }
+.cherry-drawer.drawer-inline {
+  position: absolute;
+}
 .cherry-drawer .drawer-left {
   left: 0;
   width: 376px;
