@@ -91,4 +91,18 @@ const Drawer: React.FC<DrawerProps> = props => {
     )
 }
 
+Drawer.defaultProps ={
+        close:true,
+        inline:false,
+        //root 
+        rootClassname : '',
+        rootStyle : {},
+        zIndex : 100,
+        //warpper中的内容 
+        title:'title',
+        placement : 'right',
+        //mask
+        maskCloseable : true,
+}
+
 export default Drawer

@@ -26,13 +26,12 @@ group:
 
 | 属性 | 说明 | 类型 | 默认值 |
 | :-- | :-- | :-- | :-- |
-| type | 提示类型 | `primary`\|`success`\|`warning`\|`danger`|`primary`|
-| title | Alert标题 | `string` | 提示 |
-| children | Alert描述 | `string` | 描述 |
-| closeable | 是否可关闭 | `boolean` | `false` |
-
-### 事件
-
-| 名称 | 描述 | 类型 |
-| :-- | :-- | :-- |
-| onClose | 关闭Alert时触发的事件 | `Function` | (event:MouseEvent) => void |
+| open | Drawer是否可见 | `boolean` | - |
+| onClose | 点击遮罩层或左上角关闭按钮的回调 | `function(e)` | - |
+| inline | 是否渲染在当前DOM元素 | `boolean` | `false` |
+| zIndex | 设置Drawer的`z-index` | `number` | 100 |
+| maskClosable | 点击遮罩层是否允许关闭 | `boolean` | `true` |
+| placement | 抽屉的方向 | `right` \| `left` \| `top` \| `bottom` \| `right` |
+| close | 是否显示左上角关闭按钮 | `boolean` | `true` |
+| title | 抽屉标题 | `string` | title |
+| children | 抽屉内容区域的内容 | `ReactNode` | - |

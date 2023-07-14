@@ -44,21 +44,21 @@
                  <p>Some contents...</p>
              </Drawer>
 
-             <Button onClick={rightDrawer}>Open Right Drawer</Button>
+             <Button onClick={rightDrawer} type='success'>Open Right Drawer</Button>
              <Drawer title='Right Drawer' close={true} open={right} onClose={closeRight}>
                  <p>Some contents...</p>
                  <p>Some contents...</p>
                  <p>Some contents...</p>
              </Drawer>
 
-             <Button onClick={topDrawer}>Open Top Drawer</Button>
+             <Button onClick={topDrawer} type='warning'>Open Top Drawer</Button>
              <Drawer title='Top Drawer' close={true} open={top} onClose={closeTop} placement='top'>
                  <p>Some contents...</p>
                  <p>Some contents...</p>
                  <p>Some contents...</p>
              </Drawer>
 
-             <Button onClick={bottomDrawer}>Open bottom Drawer</Button>
+             <Button onClick={bottomDrawer} type='danger'>Open bottom Drawer</Button>
              <Drawer title='Bottom Drawer' close={true} open={bottom} onClose={closeBottom} placement='bottom'>
                  <p>Some contents...</p>
                  <p>Some contents...</p>
