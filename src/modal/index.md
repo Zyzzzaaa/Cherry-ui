@@ -5,7 +5,7 @@ nav:
   order: 1
 group:
   title: 反馈
-  order: 6
+  order: 3
 ---
 
 # Modal 对话框

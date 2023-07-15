@@ -58,6 +58,7 @@
     "@commitlint/config-conventional": "^17.1.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@types/react-transition-group": "^4.4.6",
     "@umijs/lint": "^4.0.0",
     "dumi": "^2.2.0",
     "eslint": "^8.23.0",
