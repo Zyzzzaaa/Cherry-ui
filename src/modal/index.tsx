@@ -17,7 +17,7 @@ export interface ModalProps {
 }
 
 const Modal:React.FC<ModalProps> = (props) => {
-    const {children,open=false,title,mask,close,footerType='default',footerItem,onClose,...restProps} = props;
+    const {children,open=false,title,mask=true,close=true,footerType='default',footerItem,onClose,...restProps} = props;
     const [masked,setMasked] = useState(false);
 
     const onCancel = () => {
@@ -29,7 +29,6 @@ const Modal:React.FC<ModalProps> = (props) => {
 
     useEffect(()=>{
         console.log(open)
-        console.log('masked:'+masked)
         if(open){
             setMasked(!masked)
         }else{
@@ -42,17 +41,17 @@ const Modal:React.FC<ModalProps> = (props) => {
         default:(
             <>
                 <span className="footer-item" onClick={onCancel}>
-                    <Button>取消</Button>
+                    <Button >取消</Button>
                 </span>
                 <span className="footer-item" onClick={onCancel}>
-                    <Button>确定</Button>
+                    <Button >确定</Button>
                 </span>
             </>
         ),
         simple:(
             <>
                 <span className="footer-item" onClick={onCancel}>
-                    <Button>知道了</Button>
+                    <Button >知道了</Button>
                 </span>
             </>
         )
@@ -62,7 +61,7 @@ const Modal:React.FC<ModalProps> = (props) => {
         open?<div className="cherry-modal">
             {/* 遮罩层 */}
             {mask && (
-                <CSSTransition classNames='cherry-modal-mask' in={masked} timeout={300}>
+                <CSSTransition classNames='cherry-modal-mask' in={open} timeout={300}>
                     <div className="modal-mask"></div>
                 </CSSTransition>
             )}
@@ -70,8 +69,8 @@ const Modal:React.FC<ModalProps> = (props) => {
             <CSSTransition classNames='cherry-modal-content' in={open} timeout={300}>
                 <div className="modal-content">
                     <header className="modal-header">
-                        {close && <div className="modal-close"><IconClose></IconClose></div>}
                         <div className="modal-title">{title}</div>
+                        {close && <div className="modal-close" onClick={onCancel}><IconClose></IconClose></div>}
                     </header>
 
                     <div className="modal-body">{children}</div>
