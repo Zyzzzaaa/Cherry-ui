@@ -1,3 +1,7 @@
+/**
+ * title: 基础对话框
+ * description: 点击按钮弹出对话框。 
+ */
 import React,{useState} from "react"
 import { Button, Modal} from "cherry-ui"
 
