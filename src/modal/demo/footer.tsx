@@ -7,45 +7,23 @@ import { Button, Modal} from "cherry-ui"
 
 export default ()=> {
     const [open,setOpen] = useState(false)
-
-    const onOpen = () =>{
-        setOpen(true)
-    }
-    const onClose = () =>{
-        setOpen(false)
-    }
-
     const [open2,setOpen2] = useState(false)
-
-    const onOpen2 = () =>{
-        setOpen2(true)
-    }
-    const onClose2 = () =>{
-        setOpen2(false)
-    }
-
     const [open3,setOpen3] = useState(false)
 
-    const onOpen3 = () =>{
-        setOpen3(true)
-    }
-    const onClose3 = () =>{
-        setOpen3(false)
-    }
     return (
         <div>
-            <Button onClick={onOpen}>default页脚</Button>
-            <Modal open={open} onClose={onClose} title="modal组件标题">
+            <Button onClick={()=>setOpen(true)}>default页脚</Button>
+            <Modal open={open} onClose={()=>setOpen(false)} onOk={()=>setOpen(false)} title="modal组件标题">
                 这是一条警告提示
             </Modal>
 
-            <Button onClick={onOpen2}>simple页脚</Button>
-            <Modal open={open2} onClose={onClose2} title="modal组件标题" footerType='simple'>
+            <Button onClick={()=>setOpen2(true)}>simple页脚</Button>
+            <Modal open={open2} onClose={()=>setOpen2(false)} onOk={()=>setOpen2(false)} title="modal组件标题" footerType='simple'>
                 这是一条警告提示
             </Modal>
 
-            <Button onClick={onOpen3}>自定义页脚</Button>
-            <Modal open={open3} onClose={onClose3} title="modal组件标题" footerItem={[<button onClick={onClose3}>点我关闭</button>,<button>点我没用</button>]}>
+            <Button onClick={()=>setOpen3(true)}>自定义页脚</Button>
+            <Modal open={open3} onClose={()=>setOpen3(true)} title="modal组件标题" footerItem={[<button onClick={()=>setOpen3(false)}>点我关闭</button>,<button>点我没用</button>]}>
                 这是一条警告提示
             </Modal>
         </div>
