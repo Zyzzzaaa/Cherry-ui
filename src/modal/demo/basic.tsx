@@ -13,7 +13,7 @@ export default ()=> {
     return (
         <div>
             <Button onClick={onOpen}>Open Modal</Button>
-            <Modal open={open} onClose={onClose}>
+            <Modal open={open} onClose={onClose} title="modal组件标题">
                 这是一条警告提示
             </Modal>
         </div>
