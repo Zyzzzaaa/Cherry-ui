@@ -22,19 +22,9 @@ group:
 
 <code src="./demo/basic.tsx"></code>
 
-<!-- <code src="./demo/async.tsx"></code>
-
-<code src="./demo/width.tsx"></code>
-
-<code src="./demo/destroyOnClose.tsx"></code>
-
 <code src="./demo/footer.tsx"></code>
 
-<code src="./demo/style.tsx"></code>
-
-<code src="./demo/update.tsx"></code>
-
-<code src="./demo/confirm.tsx"></code> -->
+<code src="./demo/center.tsx"></code>
 
 ## API
 

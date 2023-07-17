@@ -66,6 +66,9 @@
   padding: 6px 12px;
   margin: 10px 0 10px 10px;
 }
+.cherry-modal .modal-content-default {
+  top: 100px;
+}
 .cherry-modal-mask-enter {
   opacity: 0;
 }
