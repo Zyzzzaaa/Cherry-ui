@@ -5,7 +5,7 @@ import { CSSTransition } from "react-transition-group";
 import classNames from "classnames";
 import './style/index.less'
 
-export interface ModalProps {
+interface BaseModalProps {
     children:React.ReactNode,
     open?:boolean;
     title?:string;
@@ -15,27 +15,31 @@ export interface ModalProps {
     footerType?:'default' | 'simple';
     footerItem?:React.ReactNode[];// 自定义footer
     onClose?:(event?:React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>) => void;
+    onOk?:(event?:React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>) => void;
 
 }
+type NativeModalProps = BaseModalProps & React.HTMLAttributes<HTMLElement>
+export type ModalProps = Partial<NativeModalProps>
 
 const Modal:React.FC<ModalProps> = (props) => {
-    const {children,open=false,title,mask=true,close=true,center=false,footerType='default',footerItem,onClose,...restProps} = props;
-    const [masked,setMasked] = useState(false);
+    const {children,open,title,mask,close,center,footerType,footerItem,onClose,onOk,...restProps} = props;
+    // const [masked,setMasked] = useState(false);
 
     const onCancel = () => {
         if(typeof onClose == 'function'){
             onClose();
-            console.log('opena:'+open)
+        }
+    }
+
+    const onYes = ()=>{
+        if(typeof onOk == 'function'){
+            onOk()
         }
     }
 
     useEffect(()=>{
-        console.log(open)
-        if(open){
-            setMasked(!masked)
-        }else{
-            if(masked){setMasked(false)}//避免首次渲染
-        }
+        //禁止滚动
+        document.body.style.overflow = open ? 'hidden' : ''
     },[open])
 
     // footer按钮类型
@@ -45,14 +49,14 @@ const Modal:React.FC<ModalProps> = (props) => {
                 <span className="footer-item" onClick={onCancel}>
                     <Button >取消</Button>
                 </span>
-                <span className="footer-item" onClick={onCancel}>
+                <span className="footer-item" onClick={onYes}>
                     <Button >确定</Button>
                 </span>
             </>
         ),
         simple:(
             <>
-                <span className="footer-item" onClick={onCancel}>
+                <span className="footer-item" onClick={onYes}>
                     <Button >知道了</Button>
                 </span>
             </>
@@ -60,9 +64,9 @@ const Modal:React.FC<ModalProps> = (props) => {
     }
 
     return (
-        open?<div className="cherry-modal">
+        open?<div className="cherry-modal" {...restProps}>
             {/* 遮罩层 */}
-            {mask && (
+            { mask && (
                 <CSSTransition classNames='cherry-modal-mask' in={open} timeout={300}>
                     <div className="modal-mask"></div>
                 </CSSTransition>
@@ -85,7 +89,7 @@ const Modal:React.FC<ModalProps> = (props) => {
                                         {item}
                                     </span>
                                 )
-                            }):buttonArea[footerType]
+                            }):footerType&&buttonArea[footerType]
                         }
                     </footer>
                 </div>
@@ -95,7 +99,13 @@ const Modal:React.FC<ModalProps> = (props) => {
 }
 
 Modal.defaultProps={
+    open:false,
+    title:'',
+    mask:true,
+    close:true,
+    center:false,
     footerType:"default",
+
 }
 
 export default Modal
