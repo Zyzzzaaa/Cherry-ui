@@ -15,7 +15,7 @@ const MenuItem:React.FC<MenuItemProps> = (props) => {
     const context = useContext(MenuContext)
     const classes = classNames('menu-item',className,{
         'is-disabled': disabled,
-        'is-acitve': context.index == index
+        'is-active': context.index == index
     })
     const handleClick = () => {
         if (context.onSelect && !disabled && (typeof index == 'string')){
@@ -29,4 +29,5 @@ const MenuItem:React.FC<MenuItemProps> = (props) => {
     )
 }
 
+MenuItem.displayName = 'MenuItem'
 export default MenuItem
