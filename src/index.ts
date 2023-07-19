@@ -8,3 +8,4 @@ export { default as Drawer } from './drawer';
 export { default as Modal } from './modal';
 export { default as Menu } from './menu';
 export { default as MenuItem } from './menu/menuItem';
+export { default as SubMenu } from './menu/subMenu';

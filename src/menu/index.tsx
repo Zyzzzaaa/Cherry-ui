@@ -11,6 +11,7 @@ interface BaseMenuProps {
     onSelect?: (index:string) => void;
     // 纵向模式下，设置子菜单默认打开
     defaultOpen?:string[];
+    style?:React.CSSProperties
 }
 type NativeMenuProps = BaseMenuProps & React.HTMLAttributes<HTMLElement>;
 export type MenuProps = Partial<NativeMenuProps>;
@@ -25,7 +26,7 @@ interface IMenuContext {
 export const MenuContext = createContext<IMenuContext>({index:'0'})
 
 const Menu:React.FC<MenuProps> = (props)=>{
-    const {defaultIndex,children,mode='horizontal',onSelect,}=props;
+    const {defaultIndex,children,mode='horizontal',onSelect,style}=props;
     const [currentIndex,setCurrentIndex] = useState(defaultIndex)
 
     const classes = classNames('cherry-menu',{
@@ -50,7 +51,7 @@ const Menu:React.FC<MenuProps> = (props)=>{
         return React.Children.map(children,(child,index)=>{
             const childElement = child as React.FunctionComponentElement<MenuItemProps>
             const {displayName} = childElement.type//解构幅值
-            if(displayName == 'MenuItem'){
+            if(displayName == 'MenuItem' || displayName == 'SubMenu'){
                 return React.cloneElement(childElement,{
                     index: index.toString(),
                 })
@@ -61,7 +62,7 @@ const Menu:React.FC<MenuProps> = (props)=>{
     }
 
     return (
-        <ul className={classes}>
+        <ul className={classes} style={style}>
             <MenuContext.Provider value={passedContext}>
                 {childrenRender()}
             </MenuContext.Provider>

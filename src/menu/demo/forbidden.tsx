@@ -13,7 +13,7 @@
     }
     return (
         <div>
-            <Menu onSelect={handleSelect} defaultIndex='1' style={{marginBottom: '50px'}}>
+            <Menu onSelect={handleSelect} defaultIndex='1'>
                 <MenuItem key="1">Home</MenuItem>
                 <SubMenu title='About' key='2'>
                     <MenuItem>子列表1</MenuItem>
@@ -21,15 +21,7 @@
                 </SubMenu>
                 <MenuItem key="3">Contact</MenuItem>
             </Menu>
-
-            <Menu onSelect={handleSelect} defaultIndex='0' mode="vertical">
-                <MenuItem key="1">Home</MenuItem>
-                <SubMenu title='About' key='2'>
-                    <MenuItem>子列表1</MenuItem>
-                    <MenuItem>子列表2</MenuItem>
-                </SubMenu>
-                <MenuItem key="3">Contact</MenuItem>
-            </Menu>
+            <p>You have select item {selected}</p>
         </div>
     )
 }
