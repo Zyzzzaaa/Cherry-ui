@@ -31,24 +31,6 @@ const Menu:React.FC<MenuProps> = (props)=>{
         'menu-horizontal': mode !== 'vertical'
     })
 
-    // 遍历生成menuItem组件
-    const childrenRender = () => {
-        return React.Children.map(children,(child,index)=>{
-            const childElement = child as React.FunctionComponentElement<MenuItemProps>
-            console.log(childElement);
-            const {displayName} = childElement.type//解构幅值
-            if(displayName == 'MenuItem'){
-                return React.cloneElement(childElement,{
-                    index: index.toString()
-                })
-            }else{
-                console.log('Menu has a child which is not a MenuItem component');
-                
-                //  return <Alert title="警告提示" type="warning" closeable={true}>Menu has a child which is not a MenuItem component</Alert>
-            }
-        })
-    }
-
     // 要传递的函数
     const handleClick = (index:string)=>{
         setCurrentIndex(index);
@@ -63,10 +45,25 @@ const Menu:React.FC<MenuProps> = (props)=>{
         mode,
     }
 
+    // 遍历生成menuItem组件
+    const childrenRender = () => {
+        return React.Children.map(children,(child,index)=>{
+            const childElement = child as React.FunctionComponentElement<MenuItemProps>
+            const {displayName} = childElement.type//解构幅值
+            if(displayName == 'MenuItem'){
+                return React.cloneElement(childElement,{
+                    index: index.toString(),
+                })
+            }else{
+                 return <Alert title="警告提示" type="warning" closeable={true}>Menu has a child which is not a MenuItem component</Alert>
+            }
+        })
+    }
+
     return (
         <ul className={classes}>
             <MenuContext.Provider value={passedContext}>
-                {childrenRender()}  
+                {childrenRender()}
             </MenuContext.Provider>
         </ul>
     )
@@ -74,6 +71,3 @@ const Menu:React.FC<MenuProps> = (props)=>{
 
 export default Menu
 
-function setState(defaultIndex: string | undefined): [any, any] {
-    throw new Error('Function not implemented.');
-}

@@ -4,7 +4,7 @@
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid gray;
 }
 .cherry-menu .menu-item {
   padding: 10px 10px;
@@ -21,8 +21,8 @@
 }
 .cherry-menu .menu-item.is-active,
 .cherry-menu .menu-item:hover {
-  color: pink;
-  border-bottom: 1px solid burlywood;
+  color: #d07b8b;
+  border-bottom: 1px solid #d07b8b;
 }
 .submenu-item {
   position: relative;
@@ -82,7 +82,7 @@
 .menu-vertical .menu-item.is-active,
 .menu-vertical .menu-item:hover {
   border-bottom: 0px;
-  border-left: 1px solid blue;
+  border-left: 1px solid #d07b8b;
 }
 .cherry-submenu.menu-opened {
   opacity: 1;
