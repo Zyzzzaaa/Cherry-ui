@@ -17,7 +17,7 @@ const MenuItem:React.FC<MenuItemProps> = (props) => {
         'is-disabled': disabled,
         'is-active': context.index == index
     })
-    const handleClick = (event: React.MouseEvent<HTMLLIElement>) => {
+    const handleClick = () => {
         if (context.onSelect && !disabled && (typeof index == 'string')){
             context.onSelect(index)
         }

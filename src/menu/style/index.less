@@ -27,6 +27,10 @@
         color: #d07b8b;
         border-bottom: 1px solid #d07b8b;
       }
+      &.is-active{
+        font-weight: 600;
+        background-color: lighten(#d07b8b,30%);
+      }
     }
   }
   
@@ -38,19 +42,21 @@
       align-items: center;
     }
   
-    .arrow-icon {
+    svg {
       transition: transform .25s ease-in-out;
       margin-left: 10px;
     }
   
     &:hover {
-      .arrow-icon {
+      svg {
         transform: rotate(180deg);
       }
     }
   }
   
-  
+  .menu-vertical{
+    width: 12vw;
+  }
   .is-vertical {
     .arrow-icon {
       transform: rotate(0deg) !important;
@@ -58,7 +64,7 @@
   }
   
   .is-vertical.is-opened {
-    .arrow-icon {
+    svg {
       transform: rotate(180deg) !important;
     }
   }
@@ -66,23 +72,17 @@
   .cherry-submenu {
     position: absolute;
     margin-top: 12px;
-    opacity: 1;
-    //display: none;
     list-style: none;
     padding-left: 0;
     white-space: nowrap;
-    transition: opacity .5s ease;
-  
-    //transition: $menu-transition;
     .menu-item {
       padding: 10px 10px;
       cursor: pointer;
-    //   transition: $menu-transition;
-    //   color: $body-color;
+      color: #212529;
   
       &.is-active,
       &:hover {
-        color: red !important;
+        color: #d07b8b !important;
       }
     }
   }
@@ -104,9 +104,7 @@
   .menu-vertical {
     flex-direction: column;
     border-bottom: 0px;
-    margin: 10px 20px;
-  
-    // border-right: $menu-item-active-border-width solid black;
+
     .menu-item {
       border-left: 1px solid transparent;
   
@@ -123,3 +121,18 @@
     opacity: 1;
   }
   
+  .cherry-subMenu-ul-enter{
+    opacity: 0;
+  }
+  .cherry-subMenu-ul-active{
+    opacity: 1;
+    transition: opacity 300ms;
+  }
+  .cherry-subMenu-ul-enter-done,
+  .cherry-subMenu-ul-exit{
+    opacity: 1;
+  }
+  .cherry-subMenu-ul-exit-active{
+    opacity: 0;
+    transition: opacity 300ms;
+  }
