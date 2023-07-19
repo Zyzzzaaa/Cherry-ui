@@ -15,6 +15,7 @@ group:
 ## 代码演示
 
 <code src="./demo/basic.tsx"></code>
+<code src="./demo/vertical.tsx"></code>
 <code src="./demo/sub.tsx"></code>
 
 

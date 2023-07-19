@@ -24,6 +24,10 @@
   color: #d07b8b;
   border-bottom: 1px solid #d07b8b;
 }
+.cherry-menu .menu-item.is-active {
+  font-weight: 600;
+  background-color: #f8ecee;
+}
 .submenu-item {
   position: relative;
 }
@@ -37,6 +41,9 @@
 }
 .submenu-item:hover .arrow-icon {
   transform: rotate(180deg);
+}
+.menu-vertical {
+  width: 12vw;
 }
 .is-vertical .arrow-icon {
   transform: rotate(0deg) !important;

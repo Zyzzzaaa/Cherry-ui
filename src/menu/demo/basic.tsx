@@ -1,6 +1,6 @@
 /**
  * title: 水平菜单
- * description: 点击选择菜单项并展示响应内容，支持改变默认选中项。
+ * description: 点击选择菜单项并展示相应内容，支持改变默认选中项。
  */
 import React, { useState } from "react"
 import {Menu, MenuItem} from "cherry-ui"

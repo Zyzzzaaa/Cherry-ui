@@ -8,7 +8,9 @@ import Alert from 'cherry-ui/alert';
 interface BaseMenuProps {
     defaultIndex?:string;
     mode?:'horizontal' | 'vertical';
-    onSelect?:(selectedIndex: string)=>void,
+    onSelect?: (index:string) => void;
+    // 纵向模式下，设置子菜单默认打开
+    defaultOpen?:string[];
 }
 type NativeMenuProps = BaseMenuProps & React.HTMLAttributes<HTMLElement>;
 export type MenuProps = Partial<NativeMenuProps>;
@@ -18,7 +20,7 @@ interface IMenuContext {
     index:string;
     onSelect?:(selectedIndex: string) => void;
     mode?:'horizontal' | 'vertical';
-    defaultOpenSubMenus?:string[];
+    defaultOpen?:string[];
 }
 export const MenuContext = createContext<IMenuContext>({index:'0'})
 
@@ -34,9 +36,7 @@ const Menu:React.FC<MenuProps> = (props)=>{
     // 要传递的函数
     const handleClick = (index:string)=>{
         setCurrentIndex(index);
-        if(onSelect){
-            onSelect(index)
-        }
+        onSelect && onSelect(index)
     }
     // 要传递的value
     const passedContext : IMenuContext = {
