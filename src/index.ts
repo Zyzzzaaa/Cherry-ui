@@ -10,4 +10,5 @@ export { default as Menu } from './menu';
 export { default as MenuItem } from './menu/menuItem';
 export { default as SubMenu } from './menu/subMenu';
 export { default as Breadcrumb, type ObjectsType} from './breadcrumb';
+export { default as Input } from './input';
 export { default as TreeSelect } from './treeSelect';
