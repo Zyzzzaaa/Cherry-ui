@@ -20,7 +20,7 @@ const Input:React.FC<InputProps> = (props) => {
     })
     return (
         <div className={classes} style={style} {...restprops}>
-            <input type="请输入" className={innerClasses} disabled={disabled}/>
+            <input className={innerClasses} disabled={disabled} placeholder="请输入"/>
         </div>
     )
 }
