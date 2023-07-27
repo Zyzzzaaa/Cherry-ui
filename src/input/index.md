@@ -16,6 +16,8 @@ group:
 
 <code src="./demo/basic.tsx"></code>
 
+<code src="./demo/size.tsx"></code>
+
 
 ## API
 

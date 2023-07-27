@@ -19,3 +19,20 @@
   border-color: #d07b8b;
   box-shadow: 0 0 0 0.3rem rgba(208, 123, 139, 0.25);
 }
+.cherry-input .input-inner::placeholder {
+  color: #6c757d;
+}
+.cherry-input.input-small {
+  width: 200px;
+  height: 35px;
+}
+.cherry-input.input-small .input-inner {
+  font-size: 0.1rem;
+}
+.cherry-input.input-large {
+  width: 400px;
+  height: 45px;
+}
+.cherry-input.input-large .input-inner {
+  font-size: 1.5rem;
+}

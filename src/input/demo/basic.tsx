@@ -1,12 +1,11 @@
 /**
  * title: 基础输入框
- * description: 点击选择菜单项并展示相应内容，支持改变默认选中项。
+ * description: 一个简单的输入框，支持 HTMLInput 的所有基本属性。
  */
  import React from "react"
  import {Input} from "cherry-ui"
  
  export default ()=>{
-     
      return (
         <Input></Input>
      )
