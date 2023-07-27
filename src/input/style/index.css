@@ -23,12 +23,16 @@
   color: #6c757d;
 }
 .cherry-input.input-small {
-  font-size: 0.1rem;
   width: 200px;
   height: 35px;
 }
-.cherry-input.input-large .input-inner {
-  font-size: 1.5rem;
+.cherry-input.input-small .input-inner {
+  font-size: 0.1rem;
+}
+.cherry-input.input-large {
   width: 400px;
   height: 45px;
+}
+.cherry-input.input-large .input-inner {
+  font-size: 1.5rem;
 }

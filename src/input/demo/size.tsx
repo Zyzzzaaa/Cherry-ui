@@ -1,6 +1,6 @@
 /**
  * title: 多个尺寸的输入框
- * description: 一个简单的输入框，支持 HTMLInput 的所有基本属性。
+ * description: 可以设置 size 属性改变输入框的大小。
  */
  import React from "react"
  import {Input} from "cherry-ui"
