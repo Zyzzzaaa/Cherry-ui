@@ -18,6 +18,7 @@ group:
 
 <code src="./demo/size.tsx"></code>
 
+<code src="./demo/disabled.tsx"></code>
 
 ## API
 

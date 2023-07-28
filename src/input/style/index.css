@@ -22,6 +22,10 @@
 .cherry-input .input-inner::placeholder {
   color: #6c757d;
 }
+.cherry-input .input-inner:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
 .cherry-input.input-small {
   width: 200px;
   height: 35px;
