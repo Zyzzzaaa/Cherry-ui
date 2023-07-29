@@ -27,7 +27,6 @@
         }
 
         &:disabled {
-            opacity: 0.3;
             cursor: not-allowed;
         }
     }
@@ -48,5 +47,18 @@
         .input-inner {
             font-size: 1.5rem;
         }
+    }
+
+    .input-group-prepend,
+    .input-group-append {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        margin: 0 5px;
+        background-color: #e9ecef;
+        border: #6c757d solid 1px;
+        border-radius: .5rem;
+        text-align: center;
+        white-space: nowrap;
     }
 }

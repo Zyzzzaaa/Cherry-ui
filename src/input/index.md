@@ -16,9 +16,12 @@ group:
 
 <code src="./demo/basic.tsx"></code>
 
+<code src="./demo/disabled.tsx"></code>
+
 <code src="./demo/size.tsx"></code>
 
-<code src="./demo/disabled.tsx"></code>
+<code src="./demo/append.tsx"></code>
+
 
 ## API
 

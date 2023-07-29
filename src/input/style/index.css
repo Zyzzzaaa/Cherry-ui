@@ -23,7 +23,6 @@
   color: #6c757d;
 }
 .cherry-input .input-inner:disabled {
-  opacity: 0.3;
   cursor: not-allowed;
 }
 .cherry-input.input-small {
@@ -39,4 +38,16 @@
 }
 .cherry-input.input-large .input-inner {
   font-size: 1.5rem;
+}
+.cherry-input .input-group-prepend,
+.cherry-input .input-group-append {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 0 5px;
+  background-color: #e9ecef;
+  border: #6c757d solid 1px;
+  border-radius: 0.5rem;
+  text-align: center;
+  white-space: nowrap;
 }
