@@ -27,6 +27,9 @@ group:
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | :---: | :---: | :---: | :---: | :---: |
-| data | 树结构数据 | `Array<TreeNode<T>>` | - | - |
-| data.value | 节点的真值 | `T` | - | - |
-| data.label | 节点的显示值 | `string` | - | - |
+| disable | 是否禁用 input | `boolean` | `false` |
+| size | 输入框大小 | `lg` `sm` `default` | `default` |
+| prepend | 添加前缀，用于配置一些固定组合 | `string` | - |
+| append | 添加后缀，用于配置一些固定组合 | `string` | - |
+
+以及所有原生的 `input` 元素的属性。type等属性值。
