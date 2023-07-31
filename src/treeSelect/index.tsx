@@ -1,7 +1,10 @@
 import React from "react";
+import './style/index.less'
 
 interface BaseTreeSelectProps {
-    isSingle?: boolean;
+    isSingle?: boolean; //是否为单选
+    checkable?: boolean; //
+    checkboxType?: 'circle' | 'box';
 }
 type NativeTreeSelectProps = BaseTreeSelectProps & React.HTMLAttributes<HTMLElement>;
 export type TreeSelectProps = Partial<NativeTreeSelectProps>
