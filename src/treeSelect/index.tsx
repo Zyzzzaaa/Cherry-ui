@@ -13,7 +13,7 @@ const TreeSelect:React.FC<TreeSelectProps> = (props)=>{
     const {...restprops} = props;
 
     return (
-        <div {...restprops}>
+        <div {...restprops} className="cherry-container">
 
         </div>
     )
