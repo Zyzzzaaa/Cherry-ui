@@ -1,14 +1,14 @@
 import React from "react";
 
-interface InputProps{
+interface BoxProps{
     label:string;
 }
 
-const TreeSelectInput:React.FC<InputProps>=(props)=>{
+const SelectBox:React.FC<BoxProps>=(props)=>{
     const {} = props;
     return (
         <div></div>
     )
 }
 
-export default TreeSelectInput
+export default SelectBox
