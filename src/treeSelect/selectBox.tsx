@@ -1,13 +1,19 @@
 import React from "react";
+import './style/index.less'
 
 interface BoxProps{
-    label:string;
+    disabled?:boolean;
+    checked?:boolean;
+    children?:React.ReactNode[];
 }
 
 const SelectBox:React.FC<BoxProps>=(props)=>{
-    const {} = props;
+    const {disabled, children,checked,...restprops} = props;
     return (
-        <div></div>
+        <label {...restprops} className="cherry-selectBox">
+            <input type="checkbox" disabled={disabled} checked={checked}/>
+            <span>{children}</span>
+        </label>
     )
 }
 
