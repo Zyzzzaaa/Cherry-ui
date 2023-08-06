@@ -1,0 +1,53 @@
+@import url(../../themeStyles/index.less);
+
+.cherry-selectBox {
+    display: inline-flex;
+    align-items: center;
+    color: #595959;
+    // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    .cherry-checkbox-input {
+        width: 16px;
+        height: 16px;
+        background-color: white;
+        border: 1px solid #E5E5E5;
+        appearance: none;
+        color: #E5E5E5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 21px;
+
+        &:hover {
+            border-color: red;
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            background-color: #F7F7F7;
+            border-color: #E5E5E5;
+            color: #BFBFBF;
+        }
+
+        &.icon-checkbox-fill:before {
+            content: "\2713";
+          }
+        &.icon-checkbox-indeterminate-fill:before {
+            content: "\e80a";
+          }
+    }
+
+    .cherry-selectbox-span {
+        margin-left: 5px;
+
+        &.span-disabled {
+            color: #BFBFBF;
+            cursor: not-allowed;
+        }
+    }
+
+    .is-checked {
+        color: @primary;
+        border-color: @primary;
+    }
+}
