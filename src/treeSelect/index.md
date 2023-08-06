@@ -14,6 +14,8 @@ group:
 
 ## 代码演示
 
+<code src="./demo/basic.tsx"></code>
+
 <!-- 
 <code src="./demo/trigger.tsx"></code>
 
