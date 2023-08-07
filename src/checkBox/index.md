@@ -1,5 +1,5 @@
 ---
-title: TreeSelect 树形选择框
+title: CheckBox 选择框
 nav:
   title: 组件
   order: 1
@@ -8,13 +8,15 @@ group:
   order: 5
 ---
 
-# TreeSelct 树形选择框
+# CheckBox 选择框
 
-树状选择器，用于选择树状结构的数据。
+选择框，用于选择数据。
 
 ## 代码演示
 
-<!-- <code src="./demo/basic.tsx"></code> -->
+<code src="./demo/basic.tsx"></code>
+
+<code src="./demo/disabled.tsx"></code>
 
 <!-- 
 <code src="./demo/trigger.tsx"></code>
