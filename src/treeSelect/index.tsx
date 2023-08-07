@@ -1,4 +1,5 @@
 import React from "react";
+import { FixedSizeList } from "react-window";
 import './style/index.less'
 
 interface BaseTreeSelectProps {
@@ -14,7 +15,7 @@ const TreeSelect:React.FC<TreeSelectProps> = (props)=>{
 
     return (
         <div {...restprops} className="cherry-container">
-
+            <FixedSizeList itemCount={1} itemSize={50}>{<div index='1'>111</div>}</FixedSizeList>
         </div>
     )
 }
