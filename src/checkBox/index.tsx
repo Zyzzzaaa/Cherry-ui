@@ -4,13 +4,13 @@ import './style/index.less'
 
 interface BoxProps {
     disabled?: boolean;
-    checked?: boolean;
-    indeterminate?: boolean;
+    checked?: boolean;// 默认选中
+    indeterminate?: boolean; //半选
     children?: React.ReactNode[] | string;
     onChange?: (e?: React.BaseSyntheticEvent) => void
 }
 
-const SelectBox: React.FC<BoxProps> = (props) => {
+const CheckBox: React.FC<BoxProps> = (props) => {
     const { disabled, checked = false, indeterminate = false, onChange, children, ...restprops } = props;
     const [inputChecked, setChecked] = useState(checked);
     const [half, setHalf] = useState(indeterminate)
@@ -18,6 +18,8 @@ const SelectBox: React.FC<BoxProps> = (props) => {
     useEffect(() => {
         setChecked(checked)
         setHalf(indeterminate)
+        console.log(half);
+        
     }, [checked, half])
 
     // input的类名
@@ -35,13 +37,11 @@ const SelectBox: React.FC<BoxProps> = (props) => {
 
     const changeHandle = (e: ChangeEvent<HTMLInputElement>) => {
         setChecked(e.target.checked)
-        console.log('e.target:' + e.target.checked);
-        console.log('inputCheked:' + inputChecked);
         onChange?.(e)
     }
 
     return (
-        <label {...restprops} className="cherry-selectBox">
+        <label {...restprops} className="cherry-checkBox">
             <input type="checkbox"
                 disabled={disabled}
                 checked={inputChecked}
@@ -52,4 +52,4 @@ const SelectBox: React.FC<BoxProps> = (props) => {
     )
 }
 
-export default SelectBox
+export default CheckBox
