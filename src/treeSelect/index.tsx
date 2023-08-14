@@ -2,10 +2,16 @@ import React from "react";
 import { FixedSizeList } from "react-window";
 import './style/index.less'
 
+export interface TreeOptions {
+    id:string;
+    name:string;
+    children?:string
+}
+
 interface BaseTreeSelectProps {
-    isSingle?: boolean; //是否为单选
-    checkable?: boolean; //
-    checkboxType?: 'circle' | 'box';
+    data?:Record<string,unknown>[];
+    options?:TreeOptions;
+    checkbox?:boolean;
 }
 type NativeTreeSelectProps = BaseTreeSelectProps & React.HTMLAttributes<HTMLElement>;
 export type TreeSelectProps = Partial<NativeTreeSelectProps>
