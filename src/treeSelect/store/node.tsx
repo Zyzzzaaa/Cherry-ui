@@ -1,3 +1,5 @@
+import { Store } from "./index"
+
 export interface NodeOptions {
     id: string | number
     name: string
@@ -10,7 +12,7 @@ export interface NodeOptions {
     disabled?: boolean
     parent: Node | null
     children: Node[] | null
-    // store: Store
+    store: Store
   }
   
   export class Node {
@@ -23,7 +25,7 @@ export interface NodeOptions {
     collapse: boolean
     loading: boolean
     parent: Node | null
-    // store: Store
+    store: Store
     children: Node[] | null
     loaded: boolean
     
@@ -34,7 +36,7 @@ export interface NodeOptions {
         data,
         parent,
         children,
-        // store,
+        store,
         depth = 1,
         checked = false, 
         indeterminate = false, 
@@ -53,7 +55,7 @@ export interface NodeOptions {
       this.collapse = collapse
       this.loading = loading
       this.loaded = false
-    //   this.store = store
+      this.store = store
     }
   
     hasChecked (node: Node) {
