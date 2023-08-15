@@ -26,4 +26,17 @@ const TreeSelect:React.FC<TreeSelectProps> = (props)=>{
     )
 }
 
+// 拍平数组
+export const flattern = <T extends any[] = Record<string,any>[]>(arr:T,key='children'):Record<string,any>[]=>{
+    return arr.reduce((total,current)=>{
+        const isArray = Array.isArray(current[key])
+        total.push(current)
+
+        if(isArray){
+            total.push(...flattern(current[key],key))
+        }
+        return total
+    },[])
+}
+
 export default TreeSelect
