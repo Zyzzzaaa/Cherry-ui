@@ -23,11 +23,9 @@ export class Node {
     checked: boolean
     indeterminate: boolean
     collapse: boolean
-    loading: boolean
     parent: Node | null
     store: Store
     children: Node[] | null
-    loaded: boolean
 
     constructor(options: NodeOptions) {
         const {
@@ -41,7 +39,6 @@ export class Node {
             checked = false,
             indeterminate = false,
             collapse = false,
-            loading = false
         } = options
 
         this.id = id
@@ -53,27 +50,26 @@ export class Node {
         this.indeterminate = indeterminate
         this.children = children
         this.collapse = collapse
-        this.loading = loading
-        this.loaded = false
         this.store = store
     }
 
+    // 是否被全选中（分有、无子节点讨论）
     hasChecked(node: Node) {
         if (node?.children?.length === 0 && node.checked !== false) return true
         return node.children?.length !== 0 && node.children?.every((item: Node) => item.checked)
     }
 
+    // 是否被半选中
     hasIndeterminate(node: Node) {
         return !node.hasChecked(node) && node.children?.some((item: Node) => item.checked || item.indeterminate)
     }
 
+    // 被选中
     setChecked(checked: boolean) {
         if (checked === false) {
             this.indeterminate = false
         }
-
         this.checked = checked
-
         // 自上向下
         const currentToBottom = (node: Node, checked: boolean) => {
             node.children?.forEach(item => {
@@ -87,7 +83,6 @@ export class Node {
 
             })
         }
-
         // 自下向上
         const currentToTop = (node: Node | null, checked: boolean) => {
             if (node === null) return
@@ -99,23 +94,22 @@ export class Node {
         }
 
         currentToBottom(this, checked)
-
+        // 不是最顶部的节点都要更新父节点状态
         if (this.depth !== 1) {
             currentToTop(this, checked)
         }
     }
 
+    // 展开或者关闭展示子节点
     setCollapse(collapse: boolean) {
         if (this.store.accordion) {
             if (collapse === false) {
                 this.collapse = false
             } else {
                 const children = this.parent?.children
-
                 children?.forEach(node => {
                     node.collapse = false
                 })
-
                 this.collapse = true
             }
         } else {
@@ -123,33 +117,13 @@ export class Node {
         }
     }
 
-    setLoading(loading: boolean) {
-        this.loading = loading
-    }
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    load(fn: (resolve: (res: any) => void, reject: (err: any) => void) => void) {
-        this.loading = true
-        return new Promise<Record<string, unknown>[]>(fn).then((res) => {
-            if (!this.loaded) {
-                this.setChildren(res)
-            }
-
-            if (this.checked) {
-                this.setChecked(true)
-            }
-        }).finally(() => {
-            this.loaded = true
-            this.loading = false
-        })
-    }
-
+    // 创建子节点
     setChildren(data: Record<string, unknown>[], append = false) {
         const { id = 'id', name = 'name', children = 'children' } = this.store.treeOptions
 
         const dfs = (data: Record<string, unknown>[], depth: number, parent: Node) => {
             if (!data) return []
-            const result = data.map((item) => {
+            const res = data.map((item) => {
                 const node: Node = this.store.createNode({
                     id: item[id] as number | string,
                     name: item[name] as string,
@@ -165,9 +139,8 @@ export class Node {
 
                 return node
             })
-
-            depth = this.depth
-            return result
+            // depth = this.depth
+            return res
         }
 
         const result = dfs(data, this.depth + 1, this)

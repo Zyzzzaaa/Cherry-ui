@@ -8,7 +8,7 @@ export interface StoreOptions {
 export class Store {
     treeOptions: TreeOptions;
     data: Record<string, any>[];
-    accordion: boolean;
+    accordion: boolean;//只允许展开一个节点
     root: Node;
 
     constructor(data: Record<string, any>[], options: StoreOptions) {
