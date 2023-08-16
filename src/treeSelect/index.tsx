@@ -4,6 +4,8 @@ import { Store } from "./store";
 import { Node } from "./store/node";
 import './style/index.less'
 import { CheckBox } from 'cherry-ui';
+import { NodeShow } from "./store/NodeShow";
+import { RightOutlined } from 'cherry-ui/icons';
 
 
 
@@ -73,6 +75,9 @@ const TreeSelect:React.FC<TreeSelectProps> = (props)=>{
         return (
             <li key={node.id} className="tree-node" style={{display: showNode(node) ? 'block' : 'none', ...style}}>
                 <div>
+                    <NodeShow show={!!node.children}>
+                        <RightOutlined/>
+                    </NodeShow>
                     <CheckBox checked={node.checked} indeterminate={node.indeterminate} onChange={changeHandle}>
                         {node.name}
                     </CheckBox>
