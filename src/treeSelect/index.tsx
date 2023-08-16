@@ -69,6 +69,7 @@ const TreeSelect:React.FC<TreeSelectProps> = (props)=>{
             node.setChecked(e?.target.checked)
             setTree([...tree])
         }
+        
         return (
             <li key={node.id} className="tree-node" style={{display: showNode(node) ? 'block' : 'none', ...style}}>
                 <div>
@@ -83,7 +84,7 @@ const TreeSelect:React.FC<TreeSelectProps> = (props)=>{
 
     return (
         <div className="cherry-tree" ref={treeRef}>
-            <FixedSizeList itemCount={displayNode.length} itemData={displayNode} itemSize={50} innerElementType='ul' width="100%" height="100px">
+            <FixedSizeList itemCount={displayNode.length} itemData={displayNode} itemSize={50} innerElementType='ul' width="100%" height={200}>
                 {treeNode}
             </FixedSizeList>
         </div>

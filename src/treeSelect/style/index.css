@@ -1,0 +1,8 @@
+.cherry-tree {
+  box-sizing: border-box;
+}
+.cherry-tree tree-node {
+  height: 35px;
+  padding: 3px 0;
+  font-size: 14px;
+}
