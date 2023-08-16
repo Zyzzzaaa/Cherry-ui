@@ -25,9 +25,11 @@
             border-color: #E5E5E5;
             color: #BFBFBF;
         }
+
         &.is-checked {
             background-color: @primary;
         }
+
         &.icon-checkbox-fill:before {
             content: ' ';
             transform: rotate(45deg) scale(1);
@@ -42,16 +44,22 @@
             transition: all .1s cubic-bezier(.71, -0.46, .88, .6);
         }
 
-        &.half-checked:before {
+        &.icon-checkbox-half-fill:before {
             content: " ";
             transform: rotate(90deg) scale(1) translate(1px, -2px);
             position: absolute;
             width: 0px;
+            height: 8px;
+            top: 1.5px;
+            left: 4px;
             border: 2px solid #fff;
             border-top: 0;
             border-left: 0;
             transition: all .1s cubic-bezier(.71, -0.46, .88, .6);
+        }
 
+        &.is-half {
+            background-color: @primary;
         }
     }
 
@@ -68,7 +76,7 @@
             cursor: not-allowed;
         }
     }
-    
+
     .is-checked {
         color: @primary;
         border-color: @primary;
