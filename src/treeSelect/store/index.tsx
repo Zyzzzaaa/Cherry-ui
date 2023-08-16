@@ -41,6 +41,9 @@ export class Store {
     // dfs方法创建树
     createTree(data: Record<string, any>[]) {
         const dfs = (data: Record<string, any>[], depth = 1, parent: Node | null = null) => {
+            if (!data || data.length === 0) {
+                return [];
+            }
             const { id, name, children } = this.treeOptions;
             const res = data.map((item) => {
                 const node: Node = this.createNode({

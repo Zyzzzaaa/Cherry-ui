@@ -18,7 +18,7 @@ const CheckBox: React.FC<BoxProps> = (props) => {
     useEffect(() => {
         setChecked(checked)
         setHalf(indeterminate)
-        console.log(half);
+        console.log('half'+half);
         
     }, [checked, half])
 
