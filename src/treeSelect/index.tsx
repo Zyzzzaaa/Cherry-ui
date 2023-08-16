@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FixedSizeList } from "react-window";
+import { Store } from "./store";
+import { Node } from "./store/node";
 import './style/index.less'
+import { CheckBox } from 'cherry-ui';
+
+
 
 export interface TreeOptions {
     id:string;
@@ -12,19 +17,10 @@ interface BaseTreeSelectProps {
     data?:Record<string,unknown>[];
     options?:TreeOptions;
     checkbox?:boolean;
+    accordion?:boolean;
 }
 type NativeTreeSelectProps = BaseTreeSelectProps & React.HTMLAttributes<HTMLElement>;
 export type TreeSelectProps = Partial<NativeTreeSelectProps>
-
-const TreeSelect:React.FC<TreeSelectProps> = (props)=>{
-    const {...restprops} = props;
-
-    return (
-        <div {...restprops} className="cherry-container">
-            <FixedSizeList itemCount={1} itemSize={50}>{<div index='1'>111</div>}</FixedSizeList>
-        </div>
-    )
-}
 
 // 拍平数组
 export const flattern = <T extends any[] = Record<string,any>[]>(arr:T,key='children'):Record<string,any>[]=>{
@@ -37,6 +33,61 @@ export const flattern = <T extends any[] = Record<string,any>[]>(arr:T,key='chil
         }
         return total
     },[])
+}
+
+const TreeSelect:React.FC<TreeSelectProps> = (props)=>{
+    const {options = {id:'id',name:'name',children:'children'},data = [],accordion = false} = props;
+
+    const store = new Store(data,{
+        treeOptions:options,
+        accordion
+    })
+    const treeRef = useRef(null)
+    // 创建树
+    const [tree, setTree] = useState(store.createTree(data));
+    // 创建拍平树的列表
+    const [flatternTree, setFlatternTree] = useState<Node[]>(flattern(tree) as Node[])
+
+    useEffect(()=>{
+        setTree(store.createTree(data))
+    },[data])
+    useEffect(()=>{
+        setFlatternTree(flattern(tree) as Node[])
+    },[tree])
+
+    // 判断是否展示node
+    const showNode = (node: Node | null): boolean =>{
+        if(!node) return false;
+        if(!node.parent?.collapse) return false;
+        if(node.depth===1) return true;
+        return showNode(node.parent)
+    }
+
+    const treeNode = ({data, index, style}: {data: Node[], index: number, style: React.CSSProperties}) => {
+        const node = data[index];
+        const changeHandle = (e:any) =>{
+            node.setChecked(e?.target.checked)
+            setTree([...tree])
+        }
+        return (
+            <li key={node.id} className="tree-node" style={{display: showNode(node) ? 'block' : 'none', ...style}}>
+                <div>
+                    <CheckBox checked={node.checked} indeterminate={node.indeterminate} onChange={changeHandle}>
+                        {node.name}
+                    </CheckBox>
+                </div>
+            </li>
+        )
+    }
+    const displayNode = flatternTree.filter(node=>showNode(node))
+
+    return (
+        <div className="cherry-tree" ref={treeRef}>
+            <FixedSizeList itemCount={displayNode.length} itemData={displayNode} itemSize={50} innerElementType='ul' width="100%" height="100px">
+                {treeNode}
+            </FixedSizeList>
+        </div>
+    )
 }
 
 export default TreeSelect
