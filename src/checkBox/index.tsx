@@ -18,16 +18,8 @@ const CheckBox: React.FC<BoxProps> = (props) => {
     useEffect(() => {
         setChecked(checked)
         setHalf(indeterminate)
-        console.log('half'+half);
-        
     }, [checked, half])
 
-    // input的类名
-    const classes = classNames('cherry-checkbox-input', {
-        "is-checked": inputChecked,
-        'icon-checkbox-fill': inputChecked,
-        "half-checked": half,
-    })
     // span的类名
     const spanClasses = classNames('cherry-selectbox-span', {
         "is-checked": inputChecked,
@@ -45,7 +37,10 @@ const CheckBox: React.FC<BoxProps> = (props) => {
             <input type="checkbox"
                 disabled={disabled}
                 checked={inputChecked}
-                className={classes}
+                className={classNames('cherry-checkbox-input',[
+                    inputChecked ? 'is-checked' : half ? 'is-half':'',
+                    inputChecked ? 'icon-checkbox-fill' : half ? 'icon-checkbox-half-fill':''
+                ])}
                 onChange={changeHandle} />
             <span className={spanClasses}>{children}</span>
         </label>

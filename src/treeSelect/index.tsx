@@ -4,6 +4,10 @@ import { Store } from "./store";
 import { Node } from "./store/node";
 import './style/index.less'
 import { CheckBox } from 'cherry-ui';
+import { NodeShow } from "./store/NodeShow";
+import { RightOutlined } from 'cherry-ui/icons';
+import { Space } from 'cherry-ui';
+import classNames from 'classnames';
 
 
 
@@ -69,14 +73,24 @@ const TreeSelect:React.FC<TreeSelectProps> = (props)=>{
             node.setChecked(e?.target.checked)
             setTree([...tree])
         }
+        const arrowClasses = classNames('tree-arrow',{
+            'tree-arrow-rotate': node.collapse
+        })
+        const openNode = () => {
+            node.setCollapse(!node.collapse);
+            setTree([...tree]);
+        }
         
         return (
-            <li key={node.id} className="tree-node" style={{display: showNode(node) ? 'block' : 'none', ...style}}>
-                <div>
+            <li key={node.id} className="tree-node" style={{display: showNode(node) ? 'block' : 'none', marginLeft:`${(node.depth-1)*20}px`,...style}}>
+                <Space>
+                    <NodeShow show={!!node.children}>
+                        <div className={arrowClasses} onClick={openNode}><RightOutlined/></div>
+                    </NodeShow>
                     <CheckBox checked={node.checked} indeterminate={node.indeterminate} onChange={changeHandle}>
                         {node.name}
                     </CheckBox>
-                </div>
+                </Space>
             </li>
         )
     }

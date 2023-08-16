@@ -1,8 +1,15 @@
 .cherry-tree {
   box-sizing: border-box;
 }
-.cherry-tree tree-node {
+.cherry-tree .tree-node {
   height: 35px;
   padding: 3px 0;
   font-size: 14px;
+}
+.cherry-tree .tree-arrow {
+  color: #c8c8c8;
+  font-size: 14px;
+}
+.cherry-tree .tree-arrow-rotate svg {
+  transform: rotate(90deg) !important;
 }

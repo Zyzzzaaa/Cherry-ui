@@ -38,15 +38,21 @@
   border-left: 0;
   transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6);
 }
-.cherry-checkBox .cherry-checkbox-input.half-checked:before {
+.cherry-checkBox .cherry-checkbox-input.icon-checkbox-half-fill:before {
   content: " ";
   transform: rotate(90deg) scale(1) translate(1px, -2px);
   position: absolute;
   width: 0px;
+  height: 8px;
+  top: 1.5px;
+  left: 4px;
   border: 2px solid #fff;
   border-top: 0;
   border-left: 0;
   transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6);
+}
+.cherry-checkBox .cherry-checkbox-input.is-half {
+  background-color: #d07b8b;
 }
 .cherry-checkBox .cherry-selectbox-span {
   padding-left: 5px;
