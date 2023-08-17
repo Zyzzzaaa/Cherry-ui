@@ -87,6 +87,7 @@ export class Store {
             // 返回一个数组as:[[1,1],[3,3]]
             keys.map(item => [item, item])
         )
+        
         const flatternTree = flattern(this.root.children as Node[])
 
         flatternTree.forEach(node => {

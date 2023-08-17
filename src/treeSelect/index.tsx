@@ -23,7 +23,7 @@ interface BaseTreeSelectProps {
     checkbox?: boolean;
     height?:number;
     accordion?: boolean;//只允许一个节点展开
-    defaultChecked?: number[] | string[];
+    defaultCheckedKeys?: number[] | string[];
     defaultExpand?: number[] | string[];
     defaultExpandAll?: boolean;
 }
@@ -48,11 +48,11 @@ const TreeSelect: React.FC<TreeSelectProps> = (props) => {
         data = [],
         height,
         accordion,
-        defaultChecked = [],
-        defaultExpand = [],
+        defaultCheckedKeys,
+        defaultExpand,
         defaultExpandAll
     } = props;
-
+    
     const store = new Store(data, {
         treeOptions: options,
         accordion
@@ -72,17 +72,14 @@ const TreeSelect: React.FC<TreeSelectProps> = (props) => {
         setFlatternTree(flattern(tree) as Node[])
     }, [tree])
     useEffect(() => {
-        if (defaultChecked) store.setCheckedKeys(defaultChecked)
+        if (defaultCheckedKeys) store.setCheckedKeys(defaultCheckedKeys)
         if (defaultExpand) store.setExpandKeys(defaultExpand)
         if (defaultExpandAll) store.expandAll(defaultExpandAll)
-    }, [defaultChecked, defaultExpand, defaultExpandAll])
+    }, [defaultCheckedKeys, defaultExpand, defaultExpandAll])
     useEffect(()=>{
         const observer = new MutationObserver((entries)=>{
-            
             const el = entries[0].target as HTMLElement;
             setParentHeight(height || el.offsetHeight)
-            console.log(el);
-            console.log(el.offsetHeight);
         })
         if(treeRef.current){
             observer.observe((treeRef.current as HTMLElement).parentNode as HTMLElement,{
@@ -134,7 +131,7 @@ const TreeSelect: React.FC<TreeSelectProps> = (props) => {
 
     return (
         <div className="cherry-tree" ref={treeRef}>
-            <FixedSizeList 
+            <FixedSizeList<Node[]> 
             itemCount={displayNode.length} 
             itemData={displayNode} 
             itemSize={50} 
@@ -151,5 +148,7 @@ const TreeSelect: React.FC<TreeSelectProps> = (props) => {
 TreeSelect.defaultProps = {
     accordion: false,
     defaultExpandAll: false,
+    defaultExpand:[],
+    defaultCheckedKeys:[]
 }
 export default TreeSelect
