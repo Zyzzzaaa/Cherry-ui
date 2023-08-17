@@ -20,6 +20,8 @@ group:
 
 <code src="./demo/circle.tsx"></code>
 
+<code src="./demo/progress.tsx"></code>
+
 ## API
 
 ### Menu
