@@ -54,7 +54,6 @@ const Menu: React.FC<MenuPops> = ({ items }) => {
     // 更新focus的menu-item
     function updateSelected(index: number, className: any) {
         if (className !== 'menu-item-forbidden') {
-            // console.log(index);
             setSelected(index)
         }
     }

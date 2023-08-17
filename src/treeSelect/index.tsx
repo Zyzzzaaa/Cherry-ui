@@ -21,7 +21,7 @@ interface BaseTreeSelectProps {
     data?: Record<string, unknown>[];
     options?: TreeOptions;
     checkbox?: boolean;
-    height?:number;
+    height?: number;
     accordion?: boolean;//只允许一个节点展开
     defaultCheckedKeys?: number[] | string[];
     defaultExpand?: number[] | string[];
@@ -52,7 +52,7 @@ const TreeSelect: React.FC<TreeSelectProps> = (props) => {
         defaultExpand,
         defaultExpandAll
     } = props;
-    
+
     const store = new Store(data, {
         treeOptions: options,
         accordion
@@ -63,7 +63,7 @@ const TreeSelect: React.FC<TreeSelectProps> = (props) => {
     // 创建拍平树的列表
     const [flatternTree, setFlatternTree] = useState<Node[]>(flattern(tree) as Node[])
     // 自适应高度
-    const [parentHeight,setParentHeight] = useState(0)
+    const [parentHeight, setParentHeight] = useState(0)
 
     useEffect(() => {
         setTree(store.createTree(data))
@@ -76,21 +76,21 @@ const TreeSelect: React.FC<TreeSelectProps> = (props) => {
         if (defaultExpand) store.setExpandKeys(defaultExpand)
         if (defaultExpandAll) store.expandAll(defaultExpandAll)
     }, [defaultCheckedKeys, defaultExpand, defaultExpandAll])
-    useEffect(()=>{
-        const observer = new MutationObserver((entries)=>{
+    useEffect(() => {
+        const observer = new MutationObserver((entries) => {
             const el = entries[0].target as HTMLElement;
             setParentHeight(height || el.offsetHeight)
         })
-        if(treeRef.current){
-            observer.observe((treeRef.current as HTMLElement).parentNode as HTMLElement,{
-                childList:true,
-                subtree:true
+        if (treeRef.current) {
+            observer.observe((treeRef.current as HTMLElement).parentNode as HTMLElement, {
+                childList: true,
+                subtree: true
             })
         }
-        return (()=>{
+        return (() => {
             observer.disconnect()
         })
-    },[height])
+    }, [height])
 
     // 判断是否展示node
     const showNode = (node: Node | null): boolean => {
@@ -115,7 +115,8 @@ const TreeSelect: React.FC<TreeSelectProps> = (props) => {
         }
 
         return (
-            <li key={node.id} className="tree-node" style={{ display: showNode(node) ? 'block' : 'none', marginLeft: `${(node.depth - 1) * 20}px`, ...style }}>
+            <li key={node.id} className="tree-node"
+                style={{ display: showNode(node) ? 'block' : 'none', marginLeft: `${(node.depth - 1) * 20}px`, ...style }}>
                 <Space>
                     <NodeShow show={!!node.children && node.children.length !== 0}>
                         <div className={arrowClasses} onClick={openNode}><RightOutlined /></div>
@@ -131,14 +132,14 @@ const TreeSelect: React.FC<TreeSelectProps> = (props) => {
 
     return (
         <div className="cherry-tree" ref={treeRef}>
-            <FixedSizeList<Node[]> 
-            itemCount={displayNode.length} 
-            itemData={displayNode} 
-            itemSize={50} 
-            innerElementType='ul' 
-            width="100%" 
-            height={parentHeight}
-            style={{overflow: height?'auto':'none'}}>
+            <FixedSizeList<Node[]>
+                itemCount={displayNode.length}
+                itemData={displayNode}
+                itemSize={50}
+                innerElementType='ul'
+                width="100%"
+                height={parentHeight}
+                style={{ overflow: height ? 'auto' : 'none' }}>
                 {treeNode}
             </FixedSizeList>
         </div>
@@ -148,7 +149,7 @@ const TreeSelect: React.FC<TreeSelectProps> = (props) => {
 TreeSelect.defaultProps = {
     accordion: false,
     defaultExpandAll: false,
-    defaultExpand:[],
-    defaultCheckedKeys:[]
+    defaultExpand: [],
+    defaultCheckedKeys: []
 }
 export default TreeSelect
