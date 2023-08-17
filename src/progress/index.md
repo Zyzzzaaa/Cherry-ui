@@ -16,6 +16,9 @@ group:
 
 <code src="./demo/basic.tsx"></code>
 
+<code src="./demo/inner.tsx"></code>
+
+<code src="./demo/circle.tsx"></code>
 
 ## API
 
