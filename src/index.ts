@@ -13,3 +13,4 @@ export { default as Breadcrumb, type ObjectsType} from './breadcrumb';
 export { default as Input } from './input';
 export { default as CheckBox} from './checkBox';
 export { default as TreeSelect } from './treeSelect';
+export { default as Progress} from './progress';

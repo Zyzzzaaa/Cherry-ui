@@ -1,0 +1,37 @@
+@import '../../themeStyles/index.less';
+
+.cherry-progress {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+
+    span {
+        display: inline-block;
+        margin-left: 5px;
+    }
+}
+
+.progress-container {
+    min-width: 220px;
+    height: 14px;
+    background: rgba(44, 104, 255, 0.06);
+    overflow: hidden;
+    border-radius: 16px;
+    color: white;
+    text-align: right;
+    box-sizing: border-box;
+
+    .progress {
+        height: 100%;
+        transition: width 0.2s linear;
+        background: var(--otaku-primary-color);
+        box-sizing: border-box;
+        font-size: 14px;
+        line-height: 1;
+    }
+    each(@theme-colors,{
+        .@{key}{
+            background-color: rgba(@value);
+        }
+    })
+}
