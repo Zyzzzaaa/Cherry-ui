@@ -14,7 +14,7 @@ import { Space } from 'cherry-ui';
         <div>
             <Button onClick={()=>{setCount(count-10<=0?0:count-10)}}>-10%</Button>
             <Button onClick={()=>{setCount(count+10)}}>+10%</Button>
-            <Space side="center">
+            <Space size="large">
             <Progress inner={true} max={100} percent={count}></Progress>
             <Progress inner={true} max={100} percent={count} circle={true}></Progress>
             </Space>

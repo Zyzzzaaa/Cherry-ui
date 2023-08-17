@@ -27,8 +27,8 @@ group:
 ### Menu
 | 参数 | 说明 | 类型 | 默认值 |
 | :-- | :-- | :-- | :-- |
-| mode | 菜单类型 | `horizontal`\|`vertical`| `horizontal` |
-| defaultIndex | 默认选中的菜单项的索引值 | `string` | `0` |
-| onSelect | 被选中时触发的回调函数 | `function` | - |
-| className | 自定义类名 | `string` | - |
-| style | 自定义样式 | `object` | - |
+| percent | 百分比 | `number` | - |
+| max | 最大值 | `number` | - |
+| theme | 主题类型 | `primary`\|`success`\|`warning`\|`danger`\|`link` | `primary` |
+| inner | 进度条内显示文字 | `boolean` | `false` |
+| circle | 圆形进度条 | `boolean` | `false` |
