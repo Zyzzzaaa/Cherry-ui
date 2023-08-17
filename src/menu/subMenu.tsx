@@ -30,7 +30,6 @@ const SubMenu: React.FC<SubMenuProps> = (props) => {
         if (!timer) {
             timer = setTimeout(() => {
                 setOpen(flag);
-                console.log(menuOpen);
                 timer = null
             }, 200)
         }
