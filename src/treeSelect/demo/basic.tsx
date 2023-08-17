@@ -1,12 +1,11 @@
 /**
- * title: 基础对话框
- * description: 点击按钮弹出对话框。 
+ * title: 基础树形组件
+ * description: 点击左侧箭头可以展开相应的子节点，点击CheckBox组件可以选中该节点。 
  */
-import React, { useState } from "react"
-import { CheckBox, TreeSelect } from "cherry-ui"
+import React from "react"
+import { TreeSelect } from "cherry-ui"
 
 export default () => {
-    const [checkAll, setCheckAll] = useState(false)
 
     const treeData = [
         {
@@ -53,23 +52,12 @@ export default () => {
     ];
 
     return (
-        <>
-            <CheckBox
-                checked={checkAll}
-                onChange={e => {
-                    setCheckAll(e.target.checked)
-                }}>全选</CheckBox>
-            <TreeSelect
-                // checkedAll={checkAll}
-                // defaultExpandAll={true}
-                // defaultExpandKeys={['0-0', '0-0-0']}
-                // defaultCheckedKeys={['0-0-0-0', '0-0-0-2', '0-0-1', '0-2']}
-                options={{
-                    id: 'key',
-                    name: 'title',
-                    children: 'children'
-                }}
-                data={treeData} />
-        </>
+        <TreeSelect
+            options={{
+                id: 'key',
+                name: 'title',
+                children: 'children'
+            }}
+            data={treeData} />
     )
 }
