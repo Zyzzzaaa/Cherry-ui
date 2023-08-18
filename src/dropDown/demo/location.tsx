@@ -2,7 +2,7 @@
  * title: 弹出位置
  * description: 支持八个弹出位置
  */
-import { DropDown, Button } from "cherry-ui";
+import { DropDown, Button } from "cherry-ui-react";
 import React from "react";
 
 const menu = [

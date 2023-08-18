@@ -3,7 +3,7 @@
  * description: 通过设置`disabled`属性来设置输入框是否禁用
  */
  import React from "react"
- import {Input} from "cherry-ui"
+ import {Input} from "cherry-ui-react"
  
  export default ()=>{
      return (

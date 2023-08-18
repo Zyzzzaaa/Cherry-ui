@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { Button } from 'cherry-ui';
+import { Button } from 'cherry-ui-react';
 export default () => {
   return (
     <div>

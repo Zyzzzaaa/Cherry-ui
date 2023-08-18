@@ -3,7 +3,7 @@
  * description: 点击触发按钮抽屉滑出，渲染在当前DOM元素中。
  */
 import React, { useState } from 'react'
-import { Drawer, Button } from 'cherry-ui'
+import { Drawer, Button } from 'cherry-ui-react'
 
 export default () => {
     const [open, setOpen] = useState(false);

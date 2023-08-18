@@ -1,0 +1,121 @@
+.cherry-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    overflow: hidden;
+
+    .modal-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.45);
+    }
+
+    .modal-content {
+        position: absolute;
+        box-sizing: border-box;
+        width: 520px;
+        padding: 20px 24px;
+        background-color: #fff;
+        border-radius: 8px;
+        background-color:rgb(252, 240, 224);
+        transition: transform 0.3s, opacity 0.3s;
+        
+        .modal-header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            width: 100%;
+            border-radius: 8px 8px 0 0 ;
+            overflow: hidden;
+            .modal-title{
+                float: left;
+                color: rgba(0,0,0,0.88);
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 1.5;
+                word-wrap: break-word;
+            }
+            .modal-close {
+                float: right;
+                width: 16px;
+                height: 16px;
+                right: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all ease 0.45s;
+            
+            &:hover{
+                background-color: rgba(0,0,0,0.1);
+            }
+            }
+        }
+
+        .modal-footer{
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            Button{
+                padding: 6px 12px;
+                margin: 10px 0 10px 10px;
+            }
+        }
+    }
+
+    .modal-content-default{
+        top: 100px;
+    }
+}
+
+//动画
+.cherry-modal-mask-enter {
+    opacity: 0;
+}
+
+.cherry-modal-mask-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.cherry-modal-mask-enter-done,
+.cherry-modal-mask-exit {
+    opacity: 1;
+}
+
+.cherry-modal-mask-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+
+.cherry-modal-content-enter {
+    transform: scale(0);
+    opacity: 0;
+}
+
+.cherry-modal-content-active {
+    transform: scale(1);
+    opacity: 1;
+    transition: opactity transform 300ms;
+}
+
+.cherry-modal-content-enter-done,
+.cherry-modal-content-exit {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.cherry-modal-content-exit-active {
+    transform: scale(0);
+    opacity: 0;
+    transition: opacity transform 300ms;
+}

@@ -1,5 +1,5 @@
-import { Button } from "cherry-ui";
-import { IconClose } from "cherry-ui/icons";
+import { Button } from "cherry-ui-react";
+import { IconClose } from "../icons";
 import React, { ReactNode, useEffect, useState } from "react"
 import { CSSTransition } from "react-transition-group";
 import classNames from "classnames";

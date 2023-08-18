@@ -3,7 +3,7 @@
  * description: 通过差UN构建一个IE对象数组来使用面包屑组件。 
  */
 import React from 'react';
-import { Breadcrumb, ObjectsType } from 'cherry-ui';
+import { Breadcrumb, ObjectsType } from 'cherry-ui-react';
 
 export default () => {
     const obj: ObjectsType[] = [
