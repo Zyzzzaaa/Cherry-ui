@@ -3,7 +3,7 @@
  * description: 只允许展开一个树节点。 
  */
  import React from "react"
- import { TreeSelect } from "cherry-ui"
+ import { TreeSelect } from "cherry-ui-react"
  
  export default () => {
  

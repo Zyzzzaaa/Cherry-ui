@@ -3,7 +3,7 @@
  * description: 通过设置`target`属性来设置跳转方式，`_blank`在新标签页打开，`_self`在当前页面打开。 
  */
  import React from 'react';
- import { Breadcrumb, ObjectsType } from 'cherry-ui';
+ import { Breadcrumb, ObjectsType } from 'cherry-ui-react';
  
  export default () => {
      const obj: ObjectsType[] = [

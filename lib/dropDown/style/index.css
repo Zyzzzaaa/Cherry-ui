@@ -1,0 +1,54 @@
+.cherry-dropdown {
+  padding: 5px;
+  background-color: transparent;
+}
+.cherry-dropdown .menu {
+  padding: 5px;
+  background-color: #f8ecee;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px 6px rgba(0, 0, 0, 0.05);
+}
+.cherry-dropdown .menu-item {
+  position: relative;
+  height: 20px;
+  line-height: 20px;
+  padding: 10px 30px 10px 10px;
+  cursor: pointer;
+}
+.cherry-dropdown .menu-item .item-menu {
+  position: absolute;
+}
+.cherry-dropdown .menu-item-focus {
+  position: relative;
+  height: 20px;
+  line-height: 20px;
+  padding: 10px 30px 10px 10px;
+  color: #d07b8b;
+  cursor: pointer;
+}
+.cherry-dropdown .item-arrow {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+}
+.cherry-dropdown .item-arrow span {
+  color: #c1c1c1;
+}
+.cherry-dropdown .menu-item-forbidden {
+  position: relative;
+  height: 20px;
+  line-height: 20px;
+  padding: 10px 30px 10px 10px;
+  background-color: #efefef;
+  cursor: not-allowed;
+}
+.cherry-dropdown .menu-item:hover,
+.cherry-dropdown .menu-item-focus:hover {
+  background-color: #ebc6cd;
+}
+.cherry-dropdown-box button {
+  margin: 0 10px;
+}
+.cherry-dropdown-box .popup {
+  transition: height 1s linear 0s;
+}

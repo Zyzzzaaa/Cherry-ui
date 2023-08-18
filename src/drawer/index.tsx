@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import classNames from "classnames";
 import './style/index.less'
-import { IconClose } from 'cherry-ui/icons';
+import { IconClose } from '../icons';
 
 interface DrawerDefaultProps {
     // 是否有关闭按钮

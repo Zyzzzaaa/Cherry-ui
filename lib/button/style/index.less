@@ -1,0 +1,59 @@
+@import url(../../themeStyles/index.less);
+//size 为 small 时的样式
+@btn-small-padding: 4px 8px;
+@btn-small-fontSize: 12px;
+@btn-small-wight: 2.5rem;
+@btn-small-height: 2.5rem;
+//size 为 large 时的样式
+@btn-large-padding: 8px 16px;
+@btn-large-fontSize: 28px;
+@btn-large-wight: 5rem;
+@btn-large-height: 5rem;
+
+a {
+  text-decoration: none;
+}
+
+.cherry-btn {
+  margin: 8px 10px;
+  padding: 10px 16px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #d07b8b;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 0px rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.btn-small {
+  padding: @btn-small-padding;
+  font-size: @btn-small-fontSize;
+}
+
+.btn-large {
+  padding: @btn-large-padding;
+  font-size: @btn-large-fontSize;
+  border-radius: 15px;
+}
+
+each(@theme-colors, {
+  .@{key} {
+    background-color: rgba(@value);
+    border: 1px solid rgba(@value);
+    &:hover {
+      background-color: darken(@value, 10%);
+    }
+    &.is-disabled{
+      cursor: not-allowed;
+      background-color: lighten(@value, 18%);
+      border: 1px solid lighten(@value, 18%);
+    }
+  }
+})
+  .is-round {
+  border-radius: 20px;
+}

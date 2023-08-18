@@ -3,7 +3,7 @@
  * description: 我们提出了4种颜色的`Alert`，分别是:`primary` 、`success`、`warning`、`danger`。
  */
 import React from "react";
-import { Alert } from "cherry-ui";
+import { Alert } from "cherry-ui-react";
 
 export default () => {
     return (

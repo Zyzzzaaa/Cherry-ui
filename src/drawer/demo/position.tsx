@@ -3,7 +3,7 @@
  * description: 自定义位置，点击触发按钮抽屉从响应的位置滑出，点击遮罩层关闭
  */
  import React, { useState } from 'react'
- import { Drawer, Button} from 'cherry-ui'
+ import { Drawer, Button} from "cherry-ui-react"
  
  export default () => {
      const [left,setLeft] = useState(false);

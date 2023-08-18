@@ -3,7 +3,7 @@
  * description: 可以通过改变`size`的值来控制子元素之间的间距。
  */
  import React from "react"
- import { Space, Button, Divider } from "cherry-ui"
+ import { Space, Button, Divider } from "cherry-ui-react"
  
  export default () => {
      return (
