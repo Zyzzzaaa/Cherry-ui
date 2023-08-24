@@ -3,7 +3,7 @@
  * description: 可以设置 size 属性改变输入框的大小。
  */
  import React from "react"
- import {Input} from "cherry-ui"
+ import {Input} from "cherry-ui-react"
  
  export default ()=>{
      return (

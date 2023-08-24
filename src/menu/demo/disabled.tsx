@@ -3,7 +3,7 @@
  * description: 禁用菜单项，不可点击选择。
  */
  import React, { useState } from "react"
- import {Menu, MenuItem} from "cherry-ui"
+ import {Menu, MenuItem} from "cherry-ui-react"
  
  export default ()=>{
      const [selected,setSelected] = useState('1');

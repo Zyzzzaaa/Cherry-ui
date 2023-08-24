@@ -3,7 +3,7 @@
  * description: 可以通过改变`side`的值来设置对齐方式，可以靠左对齐，居中显示，靠右对齐。
  */
 import React from "react"
-import { Space, Button, Divider } from "cherry-ui"
+import { Space, Button, Divider } from "cherry-ui-react"
 
 export default () => {
     return (

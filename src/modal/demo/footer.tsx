@@ -3,7 +3,7 @@
  * description: 可以通过`footerType`来选择我们给出的两种基本模式的页脚，也可以自定义页脚内容。
  */
 import React,{useState} from "react"
-import { Button, Modal} from "cherry-ui"
+import { Button, Modal} from "cherry-ui-react"
 
 export default ()=> {
     const [open,setOpen] = useState(false)
