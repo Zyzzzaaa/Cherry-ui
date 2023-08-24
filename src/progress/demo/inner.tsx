@@ -3,7 +3,7 @@
  * description: 通过`inner`属性来选择进度文字是否在进度条内显示。
  */
  import React from "react"
- import { Progress } from "cherry-ui-react"
+ import { Progress } from "cherry-ui"
  
  export default () => {
      return (

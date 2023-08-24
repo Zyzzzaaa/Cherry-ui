@@ -3,7 +3,7 @@
  * description: 支持默认展开、选中指定项。 
  */
 import React from "react"
-import { TreeSelect } from "cherry-ui-react"
+import { TreeSelect } from "cherry-ui"
 
 export default () => {
 

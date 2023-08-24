@@ -3,9 +3,9 @@
  * description: 会动的精度条。
  */
  import React, { useState } from "react"
- import { Progress } from 'cherry-ui-react'
- import { Button } from 'cherry-ui-react';
-import { Space } from 'cherry-ui-react';
+ import { Progress } from "cherry-ui"
+ import { Button } from 'cherry-ui';
+import { Space } from 'cherry-ui';
 
  export default () => {
     const [count,setCount] = useState(20);

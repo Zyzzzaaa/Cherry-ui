@@ -3,7 +3,7 @@
  * description: 点击触发按钮抽屉从右划出，点击遮罩区或x图标关闭。可以通过设置`close`的值来选择是否需要x图标 
  */
 import React, { useState } from 'react'
-import { Drawer, Button} from "cherry-ui-react"
+import { Drawer, Button} from 'cherry-ui'
 
 export default () => {
     const [open,setOpen] = useState(false);

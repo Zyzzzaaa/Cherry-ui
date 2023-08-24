@@ -2,7 +2,7 @@ import React, { FunctionComponentElement, useContext, useState } from "react";
 import classNames from 'classnames';
 import { CSSTransition } from 'react-transition-group'
 import { MenuContext } from ".";
-import { DownOutlined } from "../icons";
+import { DownOutlined } from "cherry-ui/icons";
 import { MenuItemProps } from "./menuItem";
 
 export interface BaseSubMenuProps {

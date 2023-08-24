@@ -1,8 +1,8 @@
 import React, { createContext, useState } from 'react';
 import classNames from 'classnames';
-import  { type MenuItemProps } from "./menuItem";
+import MenuItem, { type MenuItemProps } from "./menuItem";
 import './style/index.less'
-import {Alert} from "cherry-ui-react";
+import Alert from 'cherry-ui/alert';
 
 // 整体父组件的props
 interface BaseMenuProps {

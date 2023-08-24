@@ -3,7 +3,7 @@
  * description: 点击选择菜单项并支持展示响应的子菜单内容，支持改变默认选中项。
  */
  import React, { useState } from "react"
- import {Menu, MenuItem, SubMenu} from "cherry-ui-react"
+ import {Menu, MenuItem, SubMenu} from "cherry-ui"
  
  export default ()=>{
     const [selected,setSelected] = useState('1');

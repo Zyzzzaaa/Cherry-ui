@@ -3,10 +3,10 @@ import { FixedSizeList } from "react-window";
 import { Store } from "./store";
 import { Node } from "./store/node";
 import './style/index.less'
-import { CheckBox } from 'cherry-ui-react';
+import { CheckBox } from 'cherry-ui';
 import { NodeShow } from "./store/NodeShow";
-import { RightOutlined } from '../icons';
-import { Space } from 'cherry-ui-react';
+import { RightOutlined } from 'cherry-ui/icons';
+import { Space } from 'cherry-ui';
 import classNames from 'classnames';
 
 

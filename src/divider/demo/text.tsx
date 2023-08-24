@@ -3,7 +3,7 @@
  * description: 我们允许在分割线中间添加文字，文本颜色默认与分割线颜色一致。
  */
 import React from 'react'
-import { Divider } from 'cherry-ui-react'
+import { Divider } from 'cherry-ui'
 
 export default () => {
     return (

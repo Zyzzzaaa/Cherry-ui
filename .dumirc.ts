@@ -1,10 +1,10 @@
 import { defineConfig } from 'dumi';
 
-const repo = 'cherry-ui-react';
+const repo = 'cherry-ui';
 
 export default defineConfig({
   themeConfig: {
-    name: 'cherry-ui-react',
+    name: 'cherry-ui',
     logo: 'https://s1.ax1x.com/2023/06/19/pC3ZrNR.png',
     socialLinks: {
       github: 'https://github.com/Zyzzzaaa/cherry-ui',

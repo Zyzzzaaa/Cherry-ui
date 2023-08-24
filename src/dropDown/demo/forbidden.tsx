@@ -2,7 +2,7 @@
  * title: 禁选项
  * description: 可以使用`menu-item-forbidden`类名来配置弹出菜单内容是否禁选。
  */
-import { DropDown, Button } from 'cherry-ui-react'
+import { DropDown, Button } from 'cherry-ui'
 import React from "react";
 
 const menu = [

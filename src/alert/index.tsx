@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import classNames from 'classnames'
 import './style/index.less'
-import { IconClose } from "../icons";
+import { IconClose } from "cherry-ui/icons";
 
 type BaseAlertProps = {
     type?: 'primary' | 'success' | 'warning' | 'danger';

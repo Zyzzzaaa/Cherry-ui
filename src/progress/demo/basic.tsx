@@ -3,7 +3,7 @@
  * description: 有五种主题：`primary`、`link`、`warning`、`danger`、`success`支持选择。
  */
  import React from "react"
- import {Progress} from "cherry-ui-react"
+ import {Progress} from "cherry-ui"
  
  export default ()=>{
      return (
