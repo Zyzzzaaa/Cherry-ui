@@ -3,7 +3,7 @@
  * description: 通过`circle`属性来选择是否选择圆形进度条，同样有五种主题可以选择。
  */
  import React from "react"
- import { Progress } from "cherry-ui"
+ import { Progress } from "cherry-ui-react"
  
  export default () => {
      return (

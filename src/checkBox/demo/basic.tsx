@@ -3,7 +3,7 @@
  * description: 一个简单的输入框，使用`checked`属性来控制是否默认选中。
  */
  import React from "react"
- import { CheckBox } from "cherry-ui"
+ import { CheckBox } from "cherry-ui-react"
  
  export default ()=>{
      return (

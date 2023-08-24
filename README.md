@@ -1,40 +1,29 @@
 # cherry-ui
 
-[![NPM version](https://img.shields.io/npm/v/cherry-ui.svg?style=flat)](https://npmjs.org/package/cherry-ui)
-[![NPM downloads](http://img.shields.io/npm/dm/cherry-ui.svg?style=flat)](https://npmjs.org/package/cherry-ui)
+cherry-ui是一款基于Dumi,由React+TypeScript开发的组件库
 
-A react library developed with dumi
 
-## Usage
+## 🌸 特性
 
-TODO
+- ✨ 组件主题颜色支持自定义更改
+- ❄️ 使用TypeScript开发文档，帮助用户快速上手组件库
+- 🔥 欢迎贡献组件代码，完善组件库
 
-## Options
-
-TODO
-
-## Development
+## 🧰 安装
 
 ```bash
-# install dependencies
-$ npm install
-
-# develop library by docs demo
-$ npm start
-
-# build library source code
-$ npm run build
-
-# build library source code in watch mode
-$ npm run build:watch
-
-# build docs
-$ npm run docs:build
-
-# check your project for potential problems
-$ npm run doctor
+$ npm install cherry-ui-react
 ```
 
-## LICENSE
+## ⚒ 使用
 
-MIT
+```typescript
+import {Button} from "cherry-ui-react"
+import "cherry-ui-react/lib/button/style/css"
+
+const App = () => {
+    <>
+        <Button></Button>
+    </>
+}
+```

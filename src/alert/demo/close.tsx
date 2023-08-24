@@ -3,7 +3,7 @@
  * description: 可以通过`closeable`属性来设置是否使用关闭按钮，还可以设置`onClose`来自定义点击关闭按钮触发的事件。
  */ 
  import React from "react";
- import { Alert } from "cherry-ui-react-ui";
+ import { Alert } from "cherry-ui-react";
  
  export default () => {
      return (

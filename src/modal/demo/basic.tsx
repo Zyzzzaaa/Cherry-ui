@@ -3,7 +3,7 @@
  * description: 点击按钮弹出对话框。 
  */
 import React,{useState} from "react"
-import { Button, Modal} from "cherry-ui"
+import { Button, Modal} from "cherry-ui-react"
 
 export default ()=> {
     const [open,setOpen] = useState(false)

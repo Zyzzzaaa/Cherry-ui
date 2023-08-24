@@ -2,7 +2,7 @@
  * title: 触发方式
  * description: 默认是鼠标移入时触发。可以配置trigger属性来选择点击触发
  */
-import { DropDown, Button } from "cherry-ui";
+import { DropDown, Button } from "cherry-ui-react";
 import React from "react";
 
 const menu = [

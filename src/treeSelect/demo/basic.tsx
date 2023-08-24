@@ -3,7 +3,7 @@
  * description: 点击左侧箭头可以展开相应的子节点，点击CheckBox组件可以选中该节点。 
  */
 import React from "react"
-import { TreeSelect } from "cherry-ui"
+import { TreeSelect } from "cherry-ui-react"
 
 export default () => {
 
