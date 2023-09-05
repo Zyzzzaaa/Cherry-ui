@@ -1,7 +1,7 @@
 node_modules
 lib
 dist
-doc-site
+
 .dumi/tmp
 .dumi/tmp-test
 .dumi/tmp-production
