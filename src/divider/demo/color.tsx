@@ -3,7 +3,7 @@
  * description: 我们提出了6种颜色的分割线，分别是：`primary`、`success`、`info`、`warning`、`danger`、`link`。
  */
 import React from "react";
-import {Divider} from "cherry-ui";
+import {Divider} from "cherry-ui-react";
 
 export default ()=>{
     return (
