@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FixedSizeList } from "react-window";
 import { Store } from "./store";
-import { Node } from "./store/node";
+import type { Node } from "./store/node";
 import './style/index.less'
 import { CheckBox } from 'cherry-ui-react';
 import { NodeShow } from "./store/NodeShow";
@@ -81,8 +81,9 @@ const TreeSelect: React.FC<TreeSelectProps> = (props) => {
             const el = entries[0].target as HTMLElement;
             setParentHeight(height || el.offsetHeight)
         })
+        
         if (treeRef.current) {
-            observer.observe((treeRef.current as HTMLElement).parentNode as HTMLElement, {
+            observer.observe((treeRef.current as HTMLElement) as HTMLElement, {
                 childList: true,
                 subtree: true
             })

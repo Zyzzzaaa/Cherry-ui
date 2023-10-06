@@ -1,9 +1,10 @@
-import React, { FunctionComponentElement, useContext, useState } from "react";
+import type { FunctionComponentElement} from "react";
+import React, { useContext, useState } from "react";
 import classNames from 'classnames';
 import { CSSTransition } from 'react-transition-group'
 import { MenuContext } from ".";
 import { DownOutlined } from "../icons";
-import { MenuItemProps } from "./menuItem";
+import type { MenuItemProps } from "./menuItem";
 
 export interface BaseSubMenuProps {
     index?: string;
@@ -71,7 +72,7 @@ const SubMenu: React.FC<SubMenuProps> = (props) => {
 
 return (
     <li key={index} className={classes} {...hoverEvents}>
-        <div className="submenu-title" onClick={() => setOpen(!menuOpen)}>{title}<DownOutlined></DownOutlined></div>
+        <div className="submenu-title" onClick={() => setOpen(!menuOpen)}>{title}<DownOutlined /></div>
         {renderChildren()}
     </li>
 )

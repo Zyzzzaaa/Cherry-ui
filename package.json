@@ -3,15 +3,15 @@
   "version": "0.0.6",
   "description": "A react library developed with dumi",
   "private": false,
-  "main": "lib/index.js",
-  "module": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "npm run dev",
     "dev": "dumi dev",
     "build-site": "rimraf doc-site && dumi build",
-    "clean": "rimraf lib",
     "build:father": "npm run clean && father build -p tsconfig.build.json",
+    "clean": "rimraf dist",
     "deploy:site": "npm run build-site && gh-pages -d doc-site",
     "doctor": "father doctor",
     "lint": "npm run lint:es && npm run lint:css",
@@ -20,6 +20,7 @@
   },
   "sideEffects": [
     "dist/*",
+    "esm/**/style/*",
     "lib/**/style/*",
     "*.less"
   ],
@@ -28,16 +29,17 @@
   ],
   "license": "MIT",
   "files": [
-    "lib"
+    "dist"
   ],
   "lint-staged": {
-    "src/**/*.ts?(x)": [
+    "*.ts?(x)": [
       "prettier --write",
       "eslint --fix",
       "git add"
     ],
-    "src/**/*.less": [
-      "stylelint --syntax less --fix",
+    "*.{css,less}": [
+      "stylelint --fix",
+      "prettier --write",
       "git add"
     ]
   },

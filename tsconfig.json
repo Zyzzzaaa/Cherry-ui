@@ -15,7 +15,7 @@
       "@@/*": [
         ".dumi/tmp/*"
       ],
-
+      "cherry-ui/*": ["src/*","*"]
     }
   },
   "include": [
