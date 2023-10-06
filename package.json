@@ -29,16 +29,17 @@
   ],
   "license": "MIT",
   "files": [
-    "lib"
+    "dist"
   ],
   "lint-staged": {
-    "src/**/*.ts?(x)": [
+    "*.ts?(x)": [
       "prettier --write",
       "eslint --fix",
       "git add"
     ],
-    "src/**/*.less": [
-      "stylelint --syntax less --fix",
+    "*.{css,less}": [
+      "stylelint --fix",
+      "prettier --write",
       "git add"
     ]
   },

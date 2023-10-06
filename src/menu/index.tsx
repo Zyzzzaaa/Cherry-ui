@@ -1,8 +1,8 @@
 import React, { createContext, useState } from 'react';
 import classNames from 'classnames';
-import  { type MenuItemProps } from "./menuItem";
+import { type MenuItemProps } from "./menuItem";
 import './style/index.less'
-import {Alert} from "cherry-ui-react";
+import { Alert } from "cherry-ui-react";
 
 // 整体父组件的props
 interface BaseMenuProps {
@@ -37,6 +37,7 @@ const Menu: React.FC<MenuProps> = (props) => {
     // 要传递的函数
     const handleClick = (index: string) => {
         setCurrentIndex(index);
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions, @babel/no-unused-expressions
         onSelect && onSelect(index)
     }
     // 要传递的value
@@ -58,7 +59,7 @@ const Menu: React.FC<MenuProps> = (props) => {
             } else {
                 return <Alert title="警告提示" type="warning" closeable={true}>Menu has a child which is not a MenuItem component</Alert>
             }
-        })
+        }) 
     }
 
     return (
@@ -70,9 +71,9 @@ const Menu: React.FC<MenuProps> = (props) => {
     )
 }
 
-Menu.defaultProps={
-    mode:'horizontal',
-    defaultIndex:'0'
+Menu.defaultProps = {
+    mode: 'horizontal',
+    defaultIndex: '0'
 }
 
 export default Menu

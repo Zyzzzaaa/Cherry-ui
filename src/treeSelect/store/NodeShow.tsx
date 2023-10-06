@@ -7,7 +7,7 @@ interface NodeShowProps {
     children?: React.ReactNode
 }
 
-export function NodeShow(props:NodeShowProps) {
+export function NodeShow(props: NodeShowProps) {
     const {show, flex, className, children} = props;
     const [visible, setVisible] = useState(show);
     useEffect(()=>{

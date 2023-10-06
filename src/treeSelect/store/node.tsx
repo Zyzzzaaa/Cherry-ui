@@ -1,4 +1,4 @@
-import { Store } from "./index"
+import type { Store } from "./index"
 
 export interface NodeOptions {
     id: string | number
